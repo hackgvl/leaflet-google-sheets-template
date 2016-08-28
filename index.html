@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>Greenville Guest Wi-Fi Map</title>
+  <meta name="description" content="A map of guest wi-fi in Greenville, SC. Buy a sandwich, use the Wi-Fi, support these places."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+  <link rel="stylesheet" href="./map.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+  <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=PASTEYOURMAPQUESTKEYHERE"></script>
+
+</head>
+<body>
+	<div id="map">
+		
+	</div>
+	
+    <script>
+      // using leafletjs.com and its GeoJSON    
+    function onEachFeature(feature, layer) {
+      // does this feature have a property named popupContent?
+      if (feature.properties && feature.properties.ssid) {
+      	var popuphtml = "<strong>" + feature.properties.owner + "</strong><ul><li>Network Name: " + feature.properties.ssid + "</li><li>Passphrase: " + feature.properties.passphrase + "</li><li>Notes: " + feature.properties.notes + "</li></ul>";
+        layer.bindPopup(popuphtml);
+      }
+    }
+
+      // Read JSON to variable via http://stackoverflow.com/questions/8191238/how-can-i-set-json-into-a-variable-from-a-local-url
+    function readJSON(file) {
+      var request = new XMLHttpRequest();
+      request.open('GET', file, false);
+      request.send(null);
+      if (request.status == 200)
+        return request.responseText;
+      };
+		
+      var geoJsonData = JSON.parse(readJSON('https://joinopenworks.com/wifi/guest-wi-fi-google-spreadsheet-to-geojson.php'));
+
+      var mapLayer = MQ.mapLayer(), map;
+
+      map = L.map('map', {
+        layers: mapLayer,
+        center: [ 34.8507212,-82.3985128 ],
+        zoom: 15
+      });
+
+      L.control.layers({
+        'Map': mapLayer,
+        'Hybrid': MQ.hybridLayer(),
+        'Satellite': MQ.satelliteLayer(),
+        'Dark': MQ.darkLayer(),
+            'Light': MQ.lightLayer()
+      }).addTo(map);
+
+//      map.locate({setView: true, maxZoom: 16});
+
+      L.geoJson(geoJsonData, {
+        onEachFeature: onEachFeature
+      }).addTo(map);
+  </script>
+
+</body>
+</html>
