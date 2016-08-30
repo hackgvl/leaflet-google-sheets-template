@@ -1,31 +1,32 @@
-Created during OpenData Day 2014 in Greenville SC
-https://github.com/OpenUpstate/OpenDataDay2014
 
 * [Resources](https://github.com/codeforgreenville/leaflet-wi-fi-map-using-google-sheets)
 * [Map Source Google Spreadsheet Data](http://joinopenworks.com/r/wifi)
 
-PHP is used to enerate GeoJSON using a Google Docs / Drive Spreadsheet as the source and then render markers and Wi-Fi data
-from the spreadsheet into a Leaflet Javascript-based map that will work in any modern web browser.
+PHP is used to generate GeoJSON using a Google Docs / Drive Spreadsheet as the source and then render markers and Wi-Fi data from the spreadsheet into a Leaflet Javascript-based map that will work in any modern web browser.
 
 Updates to Google the spreadsheet appear on the map somewhere between immediately or as much as a few minutes later.
 
-It's also possible to connect to a Google spreadsheet using an API call, but this code requires the spreadsheet to be published to 
-the web, and therefore doesn't use the Google APIs to get the data. To publish the Google spreadsheet open the file and go to (File -> Publish to Web) for 
+This code requires the spreadsheet to be published to the web, and therefore doesn't use the Google Sheets API to get the data.
 
-Look at the normal Google Sheets spreadsheet and notice the "key value", which will be a bunch of random numbers and letters.
+To publish the Google spreadsheet open the file and go to (File -> Publish to Web) and do the following:
+* "Entire Document" (unless you only want to publish one tab, in which case select the tab)
+* "Comma-seperated values (.csv)
+* Click Publish
+* Save the URL provided. It will look like https://docs.google.com/spreadsheets/d/{key - bunch or random numbers and letters}/pub?output=csv
 
-The source URL used in the guest-wi-fi-google-spreadsheet-to-geojson.php PHP script is the one which renders a CSV version
-of the Google spreadsheet. Insert your Google spreadsheet key near the top of guest-wi-fi-google-spreadsheet-to-geojson.php 
-where is says PASTEYOURGOOGLESHEETSKEYHERE
+The "CSV data source URL" to be used in the guest-wi-fi-google-spreadsheet-to-geojson.php PHP script looks like
+https://docs.google.com/spreadsheet/pub?key={key - bunch or random numbers and letters}&single=true&gid={tab id}&output=csv
 
-That file is of the format
-https://docs.google.com/spreadsheet/pub?key={Google spreadsheet key}&single=true&gid=0&output=csv
+If you want the first tab then use gid=0 above. If you want another tab in the Google Sheet then open that tab in you browser and look in the URL for gid=########## and use that value.
 
-The column values are used to generate the GeoJSON hard-coded, so they need to be in the following format, with these exact names
+Take the "CSV data source URL" you just constructed and insert it in the $spreadsheet_url varaible near the top of guest-wi-fi-google-spreadsheet-to-geojson.php
+
+The column values are used in this example to generate the GeoJSON are hard-coded, so they need to be in the following format, with these exact names
 owner, ssid, passphrase, notes, latitude, longitude
+otherwise you'll need to update the field names in guest-wi-fi-google-spreadsheet-to-geojson.php in the $spreadsheet_data array structure.
 
-On easy to get latitude and longitude numbers is to go to Google Maps, zoom in and center the position you want in the middle of the map. 
-The Google Maps URL for the map will contain the longitude,latitude (in that order) ex: 34.8509174,-82.3987371
+One easy way to get latitude and longitude numbers is to go to MapQuest, zoom in and center the position you want in the middle of the map and right click on the spot you want. The pop-up will show the lat and long.
+Or, in Google Maps the URL for the map will contain the longitude,latitude (in that order) ex: 34.8509174,-82.3987371
 
 The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will 
 render the GeoJSON data. For example, you'll need to change this line to point at your PHP script that renders the JSON
@@ -49,3 +50,5 @@ Leaflet has a bunch of other plug-ins and options, so the maps can be tweaked in
 
 Documentation for MapQuest and Leaflet begins at
 https://developer.mapquest.com/documentation/leaflet-plugins/maps/
+
+* Created during OpenData Day 2014 in Greenville SC https://github.com/OpenUpstate/OpenDataDay2014
