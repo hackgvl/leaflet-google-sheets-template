@@ -2,6 +2,7 @@
   // kudos to http://stackoverflow.com/a/18106727/1778785 for snippet of PHP to read Google spreadsheet as CSV
   // http://stackoverflow.com/a/18106727/1778785
 $spreadsheet_url="https://docs.google.com/spreadsheet/pub?key=PASTEYOURGOOGLESHEETSKEYHERE&single=true&gid=0&output=csv";
+
 $row_count = 0;
 
 if(!ini_set('default_socket_timeout',    15)) echo "<!-- unable to change socket timeout -->";
@@ -18,8 +19,8 @@ if (($handle = fopen($spreadsheet_url, "r")) !== FALSE) {
         'ssid' => $data[1],
         'passphrase' => $data[2],
         'notes' => $data[3],
-        'latitude' => $data[4],
-        'longitude' => $data[5],
+        'longitude' => $data[4],
+        'latitude' => $data[5],
       );
     }  // end if, not the header row
     $row_count++;
@@ -47,7 +48,7 @@ header("Access-Control-Allow-Origin: *");
 	  $row_count--;
 ?>
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [<?php print $row['latitude'];?>, <?php print $row['longitude'];?>]},
+        "geometry": {"type": "Point", "coordinates": [<?php print $row['longitude'];?>, <?php print $row['latitude'];?>]},
         "properties": {
            "owner" : <?php print json_encode($row['owner']);?>,
            "ssid": <?php print json_encode($row['ssid']);?>,
