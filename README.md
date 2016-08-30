@@ -15,7 +15,7 @@ To publish the Google spreadsheet open the file and go to (File -> Publish to We
 * Save the URL provided. It will look like https://docs.google.com/spreadsheets/d/{key - bunch or random numbers and letters}/pub?output=csv
 
 The "CSV data source URL" to be used in the guest-wi-fi-google-spreadsheet-to-geojson.php PHP script looks like
-https://docs.google.com/spreadsheet/pub?key={key - bunch or random numbers and letters}&single=true&gid={tab id}&output=csv
+``https://docs.google.com/spreadsheet/pub?key={key - bunch or random numbers and letters}&single=true&gid={tab id}&output=csv``
 
 If you want the first tab then use gid=0 above. If you want another tab in the Google Sheet then open that tab in you browser and look in the URL for gid=########## and use that value.
 
