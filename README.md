@@ -2,8 +2,10 @@
 ### Resources
 
 * [Leaflet](https://github.com/codeforgreenville/leaflet-wi-fi-map-using-google-sheets)
-* [Map Source Google Spreadsheet Data](http://joinopenworks.com/r/wifi)
-* [Convert an address to latitude and longitude in a Googel Sheet](https://ctrlq.org/code/19992-google-maps-functions-for-google-script)
+* [Example of a Working Wi-Fi Map for Greenville SC ](https://joinopenworks.com/wifi)
+* [Convert an address to latitude and longitude in a Google Sheet](https://ctrlq.org/code/19992-google-maps-functions-for-google-script)
+* [GeoJSON Specification](http://geojson.org/geojson-spec.html)
+
 
 ### Summary
 PHP is used to generate GeoJSON using a Google Docs / Drive Spreadsheet as the source and then render markers and Wi-Fi data from the spreadsheet into a Leaflet Javascript-based map that will work in any modern web browser.
