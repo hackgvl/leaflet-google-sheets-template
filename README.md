@@ -10,13 +10,15 @@
 ### Summary
 PHP is used to generate GeoJSON using a Google Docs / Drive Spreadsheet as the source and then render markers and Wi-Fi data from the spreadsheet into a Leaflet Javascript-based map that will work in any modern web browser.
 
-Updates to Google the spreadsheet appear on the map somewhere between immediately or as much as a few minutes later.
+Updates to the Google spreadsheet appear on the map somewhere between immediately or as much as a few minutes later.
 
-This code requires the spreadsheet to be published to the web, and therefore doesn't use the Google Sheets API to get the data.
+This code requires the spreadsheet to be published to the web and therefore doesn't use the Google Sheets API to get the data, which is another way you could do it.
 
 ### Publishing the Source Google Sheet in CSV Format
 
-To publish the Google spreadsheet open the file and go to (File -> Publish to Web) and do the following:
+To publish the Google spreadsheet,
+* Open the spreadsheet in your browser
+* Go to (File -> Publish to Web) and do the following
 * "Entire Document" (unless you only want to publish one tab, in which case select the tab)
 * "Comma-seperated values (.csv)
 * Click Publish
