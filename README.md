@@ -2,7 +2,7 @@
 ### Summary
 1. A Google Docs / Drive Spreadsheet is used as a data source
 2. A PHP script reads the published Google spreadsheet in real-time and converts that to a [GeoJSON format](http://geojson.org/geojson-spec.html)
-3. A [Leaflet](https://github.com/codeforgreenville/leaflet-wi-fi-map-using-google-sheets) Javascript-based map points at the GeoJSON output and magically render [Wi-Fi markers into a map](https://joinopenworks.com/wifi) that works in any modern web browser.
+3. A [Leaflet](https://github.com/codeforgreenville/leaflet-wi-fi-map-using-google-sheets) Javascript-based map points at the GeoJSON output and magically renders [Wi-Fi markers into a map](https://joinopenworks.com/wifi) that works in any modern web browser.
 
 Google spreadsheet allows for anybody to potentially edit/maintain the data.
 
