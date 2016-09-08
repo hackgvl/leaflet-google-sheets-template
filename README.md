@@ -1,20 +1,12 @@
 
-### Resources
-
-* [Leaflet](https://github.com/codeforgreenville/leaflet-wi-fi-map-using-google-sheets)
-* [Example of a Working Wi-Fi Map for Greenville SC ](https://joinopenworks.com/wifi)
-* [Convert an address to latitude and longitude in a Google Sheet](https://ctrlq.org/code/19992-google-maps-functions-for-google-script)
-* [GeoJSON Specification](http://geojson.org/geojson-spec.html)
-
-
 ### Summary
 1. Google Docs / Drive Spreadsheet is used as a data source
-2. PHP reads the Google spreadsheet in real-time and converts that to a GeoJSON format
-3. A Leaflet Javascript-based map points at the GeoJSON output and magically render Wi-Fi markers into a map that works in any modern web browser.
+2. PHP reads the Google spreadsheet in real-time and converts that to a [GeoJSON format](http://geojson.org/geojson-spec.html)
+3. A [Leaflet](https://github.com/codeforgreenville/leaflet-wi-fi-map-using-google-sheets) Javascript-based map points at the GeoJSON output and magically render [Wi-Fi markers into a map](https://joinopenworks.com/wifi) that works in any modern web browser.
 
 Google spreadsheet allows for anybody to potentially edit/maintain the data.
 
-Additions or changes to the spreadsheet appear on the map somewhere between immediately or as much as a few minutes later.
+Additions or changes to the spreadsheet appear on the map somewhere between immediately or as much as a few minutes later. 
 
 ### Publishing the Source Google Sheet in CSV Format
 
