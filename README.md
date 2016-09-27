@@ -13,7 +13,7 @@ Additions or changes to the spreadsheet appear on the map somewhere between imme
 This code requires the spreadsheet to be published to the web and therefore doesn't use the Google Sheets API to get the data, which is another way you could do it.
 
 To publish the Google spreadsheet,
-* Open the spreadsheet in your browser
+* Open the spreadsheet in your browser.
 * Go to (File -> Publish to Web) and do the following
 * "Entire Document" (unless you only want to publish one tab, in which case select the tab)
 * "Comma-seperated values (.csv)
