@@ -30,7 +30,7 @@ The "CSV data source URL" to be used in the google-spreadsheet-to-geojson.php PH
 If you want the first tab then use gid=0 above. If you want another tab in the Google Sheet then open that tab in you browser and look in the URL for gid=########## and use that value.
 
 ### Using PHP to Convert Google Sheets CSV to a GeoJSON File
-Take the "CSV data source URL" you just constructed and insert it in the $spreadsheet_url varaible near the top of google-spreadsheet-to-geojson.php
+Take the "CSV data source URL" you just constructed and insert it in the $googleSpreadsheetUrl variable near the top of google-spreadsheet-to-geojson.php
 
 The column values are used in this example to generate the GeoJSON are hard-coded to include 3 fields: title, longitude, and latitude.
 If you're using more than these three fields in your GeoJSON output then it will be necessary to  update the field names in the $spreadsheetData array structure of google-spreadsheet-to-geojson.php.
