@@ -13,11 +13,11 @@ Additions or changes to the spreadsheet appear on the map somewhere between imme
 This code requires the spreadsheet to be published to the web and therefore doesn't use the Google Sheets API to get the data (which is another way).
 
 
-#### To create your sourceGoogle spreadsheet
+#### To create your source Google spreadsheet
 * First, make a copy of the [base spreadsheet template](https://docs.google.com/spreadsheets/d/10eNXFh6mzFtii7B2PW90jmHtrQLJlRCrf3kkHU0HIH8/edit?usp=sharing)
 * Now add real title and GSP data
 
-#### To publish your sourceGoogle spreadsheet
+#### To publish your source Google spreadsheet
 * Go to (File -> Publish to Web) and do the following
 * "Entire Document" (unless you only want to publish one tab, in which case select the tab)
 * "Comma-seperated values (.csv)
