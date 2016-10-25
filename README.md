@@ -10,27 +10,30 @@ Additions or changes to the spreadsheet appear on the map somewhere between imme
 
 ### Publishing the Source Google Sheet in CSV Format
 
-This code requires the spreadsheet to be published to the web and therefore doesn't use the Google Sheets API to get the data, which is another way you could do it.
+This code requires the spreadsheet to be published to the web and therefore doesn't use the Google Sheets API to get the data (which is another way).
 
-To publish the Google spreadsheet,
-* Open the spreadsheet in your browser.
+
+#### To create your sourceGoogle spreadsheet
+* First, make a copy of the [base spreadsheet template](https://docs.google.com/spreadsheets/d/10eNXFh6mzFtii7B2PW90jmHtrQLJlRCrf3kkHU0HIH8/edit?usp=sharing)
+* Now add real title and GSP data
+
+#### To publish your sourceGoogle spreadsheet
 * Go to (File -> Publish to Web) and do the following
 * "Entire Document" (unless you only want to publish one tab, in which case select the tab)
 * "Comma-seperated values (.csv)
 * Click Publish
 * Save the URL provided. It will look like https://docs.google.com/spreadsheets/d/{key - bunch or random numbers and letters}/pub?output=csv
 
-The "CSV data source URL" to be used in the guest-wi-fi-google-spreadsheet-to-geojson.php PHP script looks like
+The "CSV data source URL" to be used in the google-spreadsheet-to-geojson.php PHP script looks like
 ``https://docs.google.com/spreadsheet/pub?key={key - bunch or random numbers and letters}&single=true&gid={tab id}&output=csv``
 
 If you want the first tab then use gid=0 above. If you want another tab in the Google Sheet then open that tab in you browser and look in the URL for gid=########## and use that value.
 
 ### Using PHP to Convert Google Sheets CSV to a GeoJSON File
-Take the "CSV data source URL" you just constructed and insert it in the $spreadsheet_url varaible near the top of guest-wi-fi-google-spreadsheet-to-geojson.php
+Take the "CSV data source URL" you just constructed and insert it in the $spreadsheet_url varaible near the top of google-spreadsheet-to-geojson.php
 
-The column values are used in this example to generate the GeoJSON are hard-coded, so they need to be in the following format, with these exact names
-owner, ssid, passphrase, notes, latitude, longitude
-otherwise you'll need to update the field names in guest-wi-fi-google-spreadsheet-to-geojson.php in the $spreadsheet_data array structure.
+The column values are used in this example to generate the GeoJSON are hard-coded to include 3 fields: title, longitude, and latitude.
+If you're using more than these three fields in your GeoJSON output then it will be necessary to  update the field names in the $spreadsheetData array structure of google-spreadsheet-to-geojson.php.
 
 ### Getting Latitude and Longitude
 
@@ -44,7 +47,7 @@ Non-programming / manual ways to get latitude and longitude numbers
 The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will 
 render the GeoJSON data. For example, you'll need to change this line to point at your PHP script that renders the JSON
 
-var geoJsonData = JSON.parse(readJSON('http://example.com/wifi/guest-wi-fi-google-spreadsheet-to-geojson.php'));
+var geoJsonData = JSON.parse(readJSON('http://example.com/my-map/google-spreadsheet-to-geojson.php'));
 
 Leaflet JS is using open MapQuest tiles. [As of July 2016](http://devblog.mapquest.com/2016/06/15/modernization-of-mapquest-results-in-changes-to-open-tile-access/),
 it's necessary to [register an account with MapQuest. Up to 15,000 views a month is free](https://developer.mapquest.com/plans).
