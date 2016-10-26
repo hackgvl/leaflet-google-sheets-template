@@ -89,7 +89,7 @@ If using Mapquest then after registering for an account do the following:
 * Go to Keys and Reporting
 * Register a new Application. Give it a name. The callback may not be necessary. Save the application
 * Click on the "Application" you created and copy the "Consumer Key", NOT the secret.
-* You'll use that key value in the index.html in the MapQuest ``<script>`` tag where it says =PASTEYOURMAPQUESTKEYHERE
+* You'll use that key value in the index.html Sin the MapQuest ``<script>`` tag where it says =PASTEYOURMAPQUESTKEYHERE
 
 
 If you register with CloudMade you can use their map tiles instead, as described by Leaflet 
@@ -102,9 +102,9 @@ example http://leafletjs.com/examples/geojson.html
 * Visit your public workspace URL in a new browser tab and you should see your map with the points specified in the spreadsheet
 
 ### Multiple Layers and Advanced Leaflet
-Leaflet has a bunch of other plug-ins and options, so the maps can be tweaked in all sorts of waysS.
+[Leaflet has a bunch of other plug-ins and options](http://leafletjs.com/reference-1.0.0.html), so the maps can be tweaked in all sorts of ways.
 
-Documentation for MapQuest and Leaflet begins at
-https://developer.mapquest.com/documentation/leaflet-plugins/maps/
+[Documentation for MapQuest and Leaflet](https://developer.mapquest.com/documentation/leaflet-plugins/maps/)
 
-* Created during OpenData Day 2014 in Greenville SC https://github.com/OpenUpstate/OpenDataDay2014
+---
+Original concept from [OpenData Day 2014 in Greenville SC](https://github.com/OpenUpstate/OpenDataDay2014)
