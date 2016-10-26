@@ -97,10 +97,9 @@ example http://leafletjs.com/examples/geojson.html
 
 ### Testing in Cloud 9
 * Save your changes (File-> Save or Ctrl + S)
-* Click Run Project and it will fire up an Apache web service running your environmentS
-* On the command line at the bottom of C9 you'll see a message like https://leaflet-map-allella.c9users.io/ (this is your public URL for the workspace)
-* Visit your workspace URL in a new browser tab
-* You should see your map with the points in the spreadsheet
+* Click Run Project and it will fire up an Apache web service running your environment
+* On the command line at the bottom of C9 you'll see a message like ``Starting Apache httpd, serving https://leaflet-wi-fi-map-allella.c9users.io/`` (your public workspace URL)
+* Visit your public workspace URL in a new browser tab and you should see your map with the points specified in the spreadsheet
 
 ### Multiple Layers and Advanced Leaflet
 Leaflet has a bunch of other plug-ins and options, so the maps can be tweaked in all sorts of waysS.
