@@ -1,67 +1,67 @@
 <?php
 // kudos to http://stackoverflow.com/a/18106727/1778785 for snippet of PHP to read Google spreadsheet as CSV
-// http://stackoverflow.com/a/18106727/1778785
 
-$googleSpreadsheetUrl = "https://docs.google.com/spreadsheet/pub?key=PASTEYOURGOOGLESHEETSKEYHERE&single=true&gid=0&output=csv";
+$googleSpreadsheetUrl = "https://docs.google.com/spreadsheet/pub?key=10eNXFh6mzFtii7B2PW90jmHtrQLJlRCrf3kkHU0HIH8&single=true&gid=0&output=csv";
 
-$rowCount = 1;
+$rowCount = 0;
+$features = array();
+$error = FALSE;
+$output = array();
 
 // attempt to set the socket timeout, if it fails then echo an error
-if(!ini_set('default_socket_timeout',    15))
+if ( ! ini_set('default_socket_timeout', 15))
 {
-  echo "<!-- unable to change socket timeout -->";
+  $output = array('error' => 'Unable to Change PHP Socket Timeout');
+  $error = TRUE;
 } // end if, set socket timeout
 
 // if the opening the CSV file handler does not fail
-if (($handle = fopen($googleSpreadsheetUrl, "r")) !== FALSE)
+if ( !$error && (($handle = fopen($googleSpreadsheetUrl, "r")) !== FALSE) )
 {
-
-  // while CSV data rows
+  // while CSV has data, read up to 10000 rows
   while (($csvRow = fgetcsv($handle, 10000, ",")) !== FALSE)
   {
+    $rowCount++;
+
     if ($rowCount == 1) { continue; } // skip the first/header row of the CSV
 
-    // store each row of the CSV in an associative array
-    $geoJsonSourceData[]= array(
-      'title' => $csvRow[0],
-      'longitude' => $csvRow[1],
-      'latitude' => $csvRow[2],
-      'notes' => $csvRow[3],
+    $features[] = array(
+      'type'     => 'Feature',
+      'geometry' => array(
+        'type'   => 'Point',
+        'coordinates' => array(
+          (float) $csvRow[0], // longitude, casted to type float
+          (float) $csvRow[1]  // latitude, casted to type float
+        )
+      ),
+      'properties' => array(
+        'title' => $csvRow[2],
+        'notes' => $csvRow[3]
+      )
     );
-    $rowCount++;
   } // end while, loop through CSV data
 
   fclose($handle); // close the CSV file handler
+
+  $output = array(
+    'type' => 'FeatureCollection',
+    'features' => $features
+  );
 }  // end if , read file handler opened
 
 // else, file didn't open for reading
 else
 {
-    die("Problem reading csv");
+  $output = array('error' => 'Problem Reading Google CSV');
 }  // end else, file open fail
+
+// convert the PHP output array to JSON "pretty" format
+$jsonOutput = json_encode($output, JSON_PRETTY_PRINT);
 
 // render JSON and no cache headers
 header('Content-type: application/json; charset=utf-8');
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Access-Control-Allow-Origin: *');
-?>
-{
-  "type": "FeatureCollection",
-  "features": [
-<?php
-	foreach ( $geoJsonSourceData AS $sourceRow  ) {
-	  $rowCount--; // decrement the row counter
-?>
-      { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [<?php print $sourceRow['longitude'];?>, <?php print $sourceRow['latitude'];?>]},
-        "properties": {
-           "title" : <?php print json_encode($sourceRow['title']);?>,
-           "notes": <?php print json_encode($sourceRow['notes']);?>
-         }
-    }<?php print ($rowCount > 1) ? ',' : ''; // only print a comma if it's not the last object in the JSON ?> 
-<?php
-	} // end foreach, row
-?>
-  ]
-}
+
+print $jsonOutput;
