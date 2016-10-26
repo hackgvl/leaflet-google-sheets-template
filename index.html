@@ -18,8 +18,8 @@
       // using leafletjs.com and its GeoJSON    
     function onEachFeature(feature, layer) {
       // does this feature have a property named popupContent?
-      if (feature.properties && feature.properties.ssid) {
-      	var popuphtml = "<strong>" + feature.properties.owner + "</strong><ul><li>Network Name: " + feature.properties.ssid + "</li><li>Passphrase: " + feature.properties.passphrase + "</li><li>Notes: " + feature.properties.notes + "</li></ul>";
+      if (feature.properties && feature.properties.title) {
+      	var popuphtml = "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li><li>Property 3: " + feature.properties.property3 + "</li></ul>";
         layer.bindPopup(popuphtml);
       }
     }

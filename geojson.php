@@ -30,13 +30,14 @@ if ( !$error && (($handle = fopen($googleSpreadsheetUrl, "r")) !== FALSE) )
       'geometry' => array(
         'type'   => 'Point',
         'coordinates' => array(
-          (float) $csvRow[0], // longitude, casted to type float
-          (float) $csvRow[1]  // latitude, casted to type float
+          (float) $csvRow[1], // longitude, casted to type float
+          (float) $csvRow[0]  // latitude, casted to type float
         )
       ),
       'properties' => array(
         'title' => $csvRow[2],
-        'notes' => $csvRow[3]
+        'notes' => $csvRow[3],
+        'property3' => $csvRow[4]
       )
     );
   } // end while, loop through CSV data
