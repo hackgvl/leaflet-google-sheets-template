@@ -1,4 +1,4 @@
-### Why
+### Why?
 Go to Google Maps, zoom into Greenville, SC and type "bike racks" or "dog parks". If you're lucky you get decent info, but inevitably you'll be looking at incomplete or irrelavant results. You may even get advertisments.
 
 This is not to say we should make a public-version of Google Map. Actually, we already have that in OpenStreetMaps.
@@ -14,7 +14,7 @@ The current lock-in approach reduces:
 * depending on the source, oversight and fairness
 
 
-### What's the Problem with Current Sharing Ideas
+### What's the Problem with Current Sharing Methods?
 Lets say you found park data on the city's GIS system and exported it out to a file. Now, you have the bright idea to build a Google Map with a layer for the parks, plus another layer for bathroom locations.
 
 You share it with friends and 5 of them love the idea. They make their own map with your city parks + their own interests (bike racks, breweries, dog parks, etc).
@@ -31,12 +31,12 @@ Now what?  Well, things get stale and maps die, that's what.
 ### How We Solve the Problem
 1. A Google Docs / Drive Spreadsheet is used as a real-time data source that virtually anybody can help maintain.
 2. A PHP script reads the published Google spreadsheet in real-time and converts that into a [GeoJSON format](http://geojson.org/geojson-spec.html)
-3. The spreadsheet is now a public, sharable GeoJSON URL (via the geojson.php) which anybody can then reference in real-time.
-4. Now any tool which understands GeoJSON, like [LeafletJS](http://leafletjs.com/), can point at one or more URLs and magically get fresh data.
+3. The spreadsheet is now a public, sharable, standardized GeoJSON URL (via the geojson.php) which anybody can reference or edit in real-time.
+4. Any tool which understands GeoJSON, like [LeafletJS](http://leafletjs.com/), can point at one or more map layer URLs and magically show fresh data.
 
 
 ### Start With a New Google Spreadsheet
-* Make a copy of the [base spreadsheet template](https://docs.google.com/spreadsheets/d/10eNXFh6mzFtii7B2PW90jmHtrQLJlRCrf3kkHU0HIH8/edit?usp=sharing)
+* Make a copy of the [base spreadsheet template](https://docs.google.com/spreadsheets/d/10eNXFh6mzFtii7B2PW90jmHtrQLJlRCrf3kkHU0HIH8/edit?usp=sharing) (File -> Make a Copy)
 * Rename your copy and start adding real "point" data, including geographic coordinates (longitude, latitude) and other properties
 
 ### Publish Your Google Spreadsheet
