@@ -80,8 +80,9 @@ Leaflet JS is using open MapQuest tiles. [As of July 2016](http://devblog.mapque
 it's necessary to [register an account with MapQuest. Up to 15,000 views a month is free](https://developer.mapquest.com/plans).
 
 ### Registering for Map Tiles
-If you register with CloudMade you can use their map tiles instead, as described by Leaflet 
-example http://leafletjs.com/examples/geojson.html
+
+The base project includes a MapQuest key but ideally you should register your own free account and use your own key
+to avoid exhausting this base key if too many people start using or abusing it.
 
 If using Mapquest then after registering for an account do the following:
 * [Login to your developer account](https://developer.mapquest.com/user/login)
@@ -90,6 +91,17 @@ If using Mapquest then after registering for an account do the following:
 * Click on the "Application" you created and copy the "Consumer Key", NOT the secret.
 * You'll use that key value in the index.html in the MapQuest <script> tag where it says =PASTEYOURMAPQUESTKEYHERE
 
+If you register with CloudMade you can use their map tiles instead, as described by Leaflet 
+example http://leafletjs.com/examples/geojson.html
+
+### Testing in Cloud 9
+* Save your changes (File-> Save or Ctrl + S)
+* Click Run Project and it will fire up an Apache web service running your environment
+* On the command line at the bottom of C9 you'll see a message like https://leaflet-map-allella.c9users.io/ (this is your public URL for the workspace)
+* Visit your workspace URL in a new browser tab
+* You should see your map with the points in the spreadsheet
+
+### Multiple Layers and Advanced Leaflet
 Leaflet has a bunch of other plug-ins and options, so the maps can be tweaked in all sorts of ways.
 
 Documentation for MapQuest and Leaflet begins at
