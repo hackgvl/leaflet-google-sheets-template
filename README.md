@@ -19,7 +19,7 @@ Lets say you found park data on the city's GIS system and exported it out to a f
 
 You share it with friends and 5 of them love the idea. They make their own map with your city parks + their own interests (bike racks, breweries, dog parks, etc).
 
-Everyone goes about sharing and copying the layers of data they like into their maps into their own.
+Everyone goes about sharing and copying the layer data they like into their their own new maps.
 
 Cool, we have 6 interesting maps.
 
