@@ -13,13 +13,15 @@ if(!ini_set('default_socket_timeout',    15))
 } // end if, set socket timeout
 
 // if the opening the CSV file handler does not fail
-if (($handle = fopen($googleSpreadsheetUrl, "r")) !== FALSE) {
+if (($handle = fopen($googleSpreadsheetUrl, "r")) !== FALSE)
+{
 
   // while CSV data rows
   while (($csvRow = fgetcsv($handle, 10000, ",")) !== FALSE)
   {
     if ($rowCount == 1) { continue; } // skip the first/header row of the CSV
-    // store each row in an associative array
+
+    // store each row of the CSV in an associative array
     $geoJsonSourceData[]= array(
       'title' => $csvRow[0],
       'longitude' => $csvRow[1],
@@ -33,7 +35,8 @@ if (($handle = fopen($googleSpreadsheetUrl, "r")) !== FALSE) {
 }  // end if , read file handler opened
 
 // else, file didn't open for reading
-else {
+else
+{
     die("Problem reading csv");
 }  // end else, file open fail
 
@@ -51,13 +54,10 @@ header('Access-Control-Allow-Origin: *');
 	  $rowCount--; // decrement the row counter
 ?>
       { "type": "Feature",
-        "geometry": {"type": "Point", "coordinates": [<?php print $row['longitude'];?>, <?php print $row['latitude'];?>]},
+        "geometry": {"type": "Point", "coordinates": [<?php print $sourceRow['longitude'];?>, <?php print $sourceRow['latitude'];?>]},
         "properties": {
-           "owner" : <?php print json_encode($sourceRow['owner']);?>,
-           "ssid": <?php print json_encode($sourceRow['ssid']);?>,
-           "passphrase": <?php print json_encode($sourceRow['passphrase']);?>,
-           "notes": <?php print json_encode($sourceRow['notes']);?>,
-           "category" : "guest"
+           "title" : <?php print json_encode($sourceRow['title']);?>,
+           "notes": <?php print json_encode($sourceRow['notes']);?>
          }
     }<?php print ($rowCount > 1) ? ',' : ''; // only print a comma if it's not the last object in the JSON ?> 
 <?php
