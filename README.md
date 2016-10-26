@@ -29,13 +29,13 @@ Now what?  Well, things get stale and maps die, that's what.
 
 
 ### How We Solve the Problem
-1. A Google Docs / Drive Spreadsheet is used as a real-time data source
-2. A PHP script reads the published Google spreadsheet in real-time and converts that to a [GeoJSON format](http://geojson.org/geojson-spec.html)
-3. The spreadsheet becomes a public, sharable GeoJSON URL (via the geojson.php) which anybody can then reference in real-time in their own maps.
-4. Now any tool that understands GeoJSON, like [LeafletJS](http://leafletjs.com/), can point at one or more URLs and magically get fresh data.
+1. A Google Docs / Drive Spreadsheet is used as a real-time data source that virtually anybody can help maintain.
+2. A PHP script reads the published Google spreadsheet in real-time and converts that into a [GeoJSON format](http://geojson.org/geojson-spec.html)
+3. The spreadsheet is now a public, sharable GeoJSON URL (via the geojson.php) which anybody can then reference in real-time.
+4. Now any tool which understands GeoJSON, like [LeafletJS](http://leafletjs.com/), can point at one or more URLs and magically get fresh data.
 
 
-#### Start With a New Google spreadsheet
+#### Start With a New Google Spreadsheet
 * Make a copy of the [base spreadsheet template](https://docs.google.com/spreadsheets/d/10eNXFh6mzFtii7B2PW90jmHtrQLJlRCrf3kkHU0HIH8/edit?usp=sharing)
 * Rename your copy and start adding real "point" data, including geographic coordinates (longitude, latitude) and other properties
 
@@ -55,29 +55,27 @@ If you want the first tab then use *gid=0* above. If you want to point at anothe
 
 ### Allowing Other People to Help Curate the Data
 
-Use Google's Share function to give "Edit" permissions to people you trust and then share the URL.
-
-You should consider allowing "Anyone with the link" to edit the data and then all you need to do is share the edit URL with trusted people.
+Use Google's *Share* function to give *Edit* permissions. You should consider allowing "Anyone with the link" to edit the data and then all you need to do is share the edit URL with trusted people.
 
 ### Using PHP to Convert a Google Sheets CSV to a GeoJSON File
 Take the "CSV data source URL" you just constructed and insert it in the $googleSpreadsheetUrl variable near the top of geojson.php
 
-The column values are used in this example to generate the GeoJSON are hard-coded to include 3 fields: title, longitude, and latitude.
-If you're using more than these three fields in your GeoJSON output then it will be necessary to  update the field names in the $spreadsheetData array structure of google-spreadsheet-to-geojson.php.
+The column values are used in this example to generate the GeoJSON are hard-coded to include 4 fields: longitude, latitude, title, and notes.
+If you need more fields you can add additional *properties* in your geojson.php under the $features['properties'] array section.
 
 ### Getting Latitude and Longitude
-
-If you know how to do custom functions in Google Sheets then you can [convert an address into latitude and longitude](https://ctrlq.org/code/19992-google-maps-functions-for-google-script) with some customization.
 
 Non-programming / manual ways to get latitude and longitude numbers
 * Go to MapQuest, zoom in and center the position you want in the middle of the map and right click on the spot you want. The pop-up will show the lat and long.
 * In Google Maps the URL for the map will contain the longitude,latitude (in that order) ex: 34.8509174,-82.3987371
 
+If you know how to do custom functions in Google Sheets then you can [convert an address into latitude and longitude](https://ctrlq.org/code/19992-google-maps-functions-for-google-script) with some customization.
+
 ### Render a Leaflet Map Showing the GeoJSON Data
 The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will 
 render the GeoJSON data. For example, you'll need to change this line to point at your PHP script that renders the JSON
 
-var geoJsonData = JSON.parse(readJSON('http://example.com/my-map/google-spreadsheet-to-geojson.php'));
+var geoJsonData = JSON.parse(readJSON('http://example.com/my-map/geojson.php'));
 
 Leaflet JS is using open MapQuest tiles. [As of July 2016](http://devblog.mapquest.com/2016/06/15/modernization-of-mapquest-results-in-changes-to-open-tile-access/),
 it's necessary to [register an account with MapQuest. Up to 15,000 views a month is free](https://developer.mapquest.com/plans).
