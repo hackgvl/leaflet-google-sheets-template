@@ -35,11 +35,11 @@ Now what?  Well, things get stale and maps die, that's what.
 4. Now any tool which understands GeoJSON, like [LeafletJS](http://leafletjs.com/), can point at one or more URLs and magically get fresh data.
 
 
-#### Start With a New Google Spreadsheet
+### Start With a New Google Spreadsheet
 * Make a copy of the [base spreadsheet template](https://docs.google.com/spreadsheets/d/10eNXFh6mzFtii7B2PW90jmHtrQLJlRCrf3kkHU0HIH8/edit?usp=sharing)
 * Rename your copy and start adding real "point" data, including geographic coordinates (longitude, latitude) and other properties
 
-#### Publish Your Google Spreadsheet
+### Publish Your Google Spreadsheet
 * Go to (File -> Publish to Web) and do the following
 * "Entire Document" (unless you only want to publish one tab, in which case select the tab)
 * "Comma-seperated values (.csv)
@@ -63,13 +63,12 @@ Take the "CSV data source URL" you just constructed and insert it in the $google
 The column values are used in this example to generate the GeoJSON are hard-coded to include 4 fields: longitude, latitude, title, and notes.
 If you need more fields you can add additional *properties* in your geojson.php under the $features['properties'] array section.
 
-### Getting Latitude and Longitude
+### Getting Longitude and Latitude
 
 Non-programming / manual ways to get latitude and longitude numbers
-* Go to MapQuest, zoom in and center the position you want in the middle of the map and right click on the spot you want. The pop-up will show the lat and long.
-* In Google Maps the URL for the map will contain the longitude,latitude (in that order) ex: 34.8509174,-82.3987371
-
-If you know how to do custom functions in Google Sheets then you can [convert an address into latitude and longitude](https://ctrlq.org/code/19992-google-maps-functions-for-google-script) with some customization.
+* (Easiest) Go to MapQuest, zoom in and center the position you want in the middle of the map and right click on the spot you want. The pop-up will show the lat and long.
+* (OK) In Google Maps zoom into a point. The URL in your browser will contain the center point's latitude and longitude (in that order) ex: 34.8509174,-82.3987371
+* (Hard, but good for looking up lots of data) If you know how to do custom functions in Google Sheets then you can [convert an address into latitude and longitude](https://ctrlq.org/code/19992-google-maps-functions-for-google-script) with some customization.
 
 ### Render a Leaflet Map Showing the GeoJSON Data
 The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will 
