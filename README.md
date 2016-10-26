@@ -73,9 +73,9 @@ If you know how to do custom functions in Google Sheets then you can [convert an
 
 ### Render a Leaflet Map Showing the GeoJSON Data
 The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will 
-render the GeoJSON data. For example, you'll need to change this line to point at your PHP script that renders the JSON
+render the GeoJSON data. The magic line for loading a single layer map is 
 
-var geoJsonData = JSON.parse(readJSON('http://example.com/my-map/geojson.php'));
+var geoJsonData = JSON.parse(readJSON('geojson.php'));
 
 Leaflet JS is using open MapQuest tiles. [As of July 2016](http://devblog.mapquest.com/2016/06/15/modernization-of-mapquest-results-in-changes-to-open-tile-access/),
 it's necessary to [register an account with MapQuest. Up to 15,000 views a month is free](https://developer.mapquest.com/plans).
