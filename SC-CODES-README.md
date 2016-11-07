@@ -4,7 +4,7 @@
 * Start thinking about ideas for open/public data you'd like to gather and share with the world.
 
 ###Ideally, this is will be data that:
-* already publicaly available but is locked inside of a map, PDF, or web page
+* already publicly available but is locked inside of a map, PDF, or web page
 * does not change frequently
 * is not something Google Maps already does well
 * is not tiny
@@ -12,8 +12,12 @@
 
 Things like Greenville restaurants or Greenville malls would not be ideal.
 
+<<<<<<< HEAD
 
 ### Map Layer Guidance
+=======
+###Map Layer Guidance
+>>>>>>> e91b7a118e54c64f0e7349f77be19a1193035017
 
 The list below are more along the lines of what's expected. You're welcome to
 claim this idea by putting your name in the (open data spreadsheet)[https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412]
@@ -29,7 +33,7 @@ claim this idea by putting your name in the (open data spreadsheet)[https://docs
 * City and County Trash / Convenience Centers
 * Dog Parks
 
-Steps for Week 9
+##Steps for Week 9
 * Decide on which project you want to use
 * Go to https://github.com/codeforgreenville/leaflet-google-sheets-template
 * Go to the top right corner and click Fork
