@@ -1,6 +1,6 @@
 ##Steps for Week 8
-* Setup GitHub.com account
 * Setup a Cloud9 account
+* Connect your GitHub account under Connected Services
 * Start thinking about ideas for open/public data you'd like to gather and share with the world.
 
 ###Ideally, this is will be data that:
@@ -11,6 +11,7 @@
 * is not huge
 
 Things like Greenville restaurants or Greenville malls would not be ideal.
+
 
 ### Map Layer Guidance
 
