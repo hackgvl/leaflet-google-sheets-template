@@ -6,7 +6,7 @@ This is not to say we should make a public-version of Google Map. Actually, we a
 Rather, lots of great public infomation is locked inside all maps, proprietary and open maps alike, in much the same way styling was locked inside of HTML before CSS.
 
 The current lock-in approach reduces:
-* accuracy of maps
+* accuracy of updates
 * the speed of changes
 * the scope of sharing
 * the ability to mix and match layers looking for new patterns (what do we see if we overlay tree planting data with census data?)
