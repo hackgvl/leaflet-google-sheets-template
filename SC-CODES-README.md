@@ -6,26 +6,26 @@
 1. Continue reading below for details about weeks 8 and 9
 
 ###Ideally, your data set should:
-* already be publicly available and not easily portable in map format (i.e. part of a PDF, web page, or Google Map)
-* consist of [longitude, latitude] "point data" (shapes or paths will be too advanced and not directly work with the base code)
-* not change frequently
-* not be something Google Maps already does accurately and completely
-* be more than 5 points and not be too huge to maintain or bog down the rendering of a map 
-* be something you could help maintain in your free time, even after SC Code wraps up
-* be specific to Greenville city, Greenville county, or the Upstate
-* be complete (try to avoid picking something if you can't get all / most of the possible points)
+* already be publicly discoverable
+* consist of [longitude, latitude] "point data" (shapes or paths will be too advanced and won't work with the sample documentation)
+* be relatively static, meaning not changing more than once every couple months
+* be something commercial maps (GPS, Google) don't already do accurately and completely
+* be more than 5 lat/long points, but not so huge it's hard to gather or maintain
+* be something you could help keep up to date in your free time, even after SC Codes wraps up
+* be specific to Greenville city, Greenville county, or the Upstate (at the broadest)
+* be complete (if you can't gather all / most of the possible points then consider something else)
 
-Non-profits, the City, and the County would be ideal examples of places to find existing data. In other cases, you may need to do the research / leg work to create the data.
+Non-profits, the City, and the County would be ideal examples of places to find existing public data that's trapped. In other cases, you may need to do the research / leg work to create the data.
 
-Good example: The [City has a map of parking decks](http://www.greenvillesc.gov/513/Parking) but the data is stuck inside of the map. You can't easily take that map and easily pull it into a Leaflet layer.
+Good example: The [City has a map of parking decks](http://www.greenvillesc.gov/513/Parking) but the data is stuck inside of the embedded Google map at the bottom. You can't easily take that map and easily pull it into a Leaflet layer.  Wouldn't it be great if it was a real-time GeoJSON based Leaflet map pulling from your project? (Answer: yes)
 
-Bad Example: Greenville restaurants or vape shops. Both change frequently and Google Maps is already pretty good at satisfying these sorts of inquiries.
+Bad Examples: Things like Greenville restaurants, potholes, or vape shops. These change frequently and/or are already done well enough by other services.
 
 ###Map Data Ideas and Staking Your Claim
 
-Below is intended to seed your brain. If it sparks a good idea then add your new idea and name to the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
+Below is intended to seed your brain. If it sparks an idea of your own then add your idea and name to the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
 
-If nobody else has claimed an idea then you're welcome to take it by putting your name beside it in [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
+If nobody else has claimed a suggested idea then you're welcome to take it by putting your name beside in [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
 
 * Libraries
 * Historic Sites
