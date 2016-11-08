@@ -1,5 +1,5 @@
 #Goals for Week 8
-1. Setup a Cloud9 account using the invite sent via Slack by Pamela (if it asks for a credit card contact Pamela)
+1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 1. Start thinking about ideas for open/public data you'd like to gather and share with the world.
 1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
@@ -43,7 +43,7 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 * Public (K-12) Schools
 
 #Goals for Week 9
-1. Fork a GitHub Project
+1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
 1. Do a basic Git command and push to GitHub
 
