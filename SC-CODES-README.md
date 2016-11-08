@@ -17,16 +17,15 @@
 
 Non-profits, the City, and the County would be ideal examples of places to find existing data. In other cases, you may need to do the research / leg work to create the data.
 
-For instance, [the City has a map of parking decks](http://www.greenvillesc.gov/513/Parking) but the data is stuck inside of their map. You can't easily take that map layer and easily reuse it besides creating another Google Map.
+Good example: The [City has a map of parking decks](http://www.greenvillesc.gov/513/Parking) but the data is stuck inside of the map. You can't easily take that map and easily pull it into a Leaflet layer.
 
-Things like Greenville restaurants, stores,  would be an example of a less desirable data set because it changes frequently, is hard to maintain, and Google Maps already does it well enough for most purposes.
+Bad Example: Greenville restaurants or vape shops. Both change frequently and Google Maps is already pretty good at satisfying these sorts of inquiries.
 
+###Map Data Ideas and Staking Your Claim
 
-###Guidance for Select Your Map Layer Data 
+Below is intended to seed your brain. If it sparks a good idea then add your new idea and name to the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
 
-The list below are more along the lines of what's expected. You're welcome to
-claim an existing idea by putting your name in the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
-Or, add your idea and name if you have something you'd like to do that's not on the list.
+If nobody else has claimed an idea then you're welcome to take it by putting your name beside it in [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
 
 * Libraries
 * Historic Sites
