@@ -2,9 +2,11 @@
 * Setup a Cloud9 account using the invite from Pamela
 * Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 * Start thinking about ideas for open/public data you'd like to gather and share with the world.
-
+* Understand the [broader purpose of the project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
+* Continue reading below for next steps
+* 
 ###Ideally, the data set should:
-* already publicly available and not easily portable (i.e. part of a PDF, web page, or Google Map)
+* already be publicly available and not easily portable (i.e. part of a PDF, web page, or Google Map)
 * consist of latitude, longitude "point data" (shapes or paths will be too advanced and not directly work with the base code)
 * not frequently changing
 * not be something Google Maps already does well
