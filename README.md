@@ -96,6 +96,7 @@ If you register with CloudMade you can use their map tiles instead, as described
 example http://leafletjs.com/examples/geojson.html
 
 ### Testing in Cloud 9
+* After [forking this base project and setup a C9 workspace](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/SC-CODES-README.md)
 * Save your changes (File-> Save or Ctrl + S)
 * Click Run Project and it will fire up an Apache web service running your environment
 * On the command line at the bottom of C9 you'll see a message like ``Starting Apache httpd, serving https://leaflet-wi-fi-map-allella.c9users.io/`` (your public workspace URL)
