@@ -1,16 +1,16 @@
-#Steps for Week 8
-1. Setup a Cloud9 account using the invite from Pamela
+#Goals for Week 8
+1. Setup a Cloud9 account using the invite sent via Slack by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 1. Start thinking about ideas for open/public data you'd like to gather and share with the world.
-1. Understand the [broader purpose of the project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
-1. Continue reading below for next steps for weeks 8 and 9
+1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
+1. Continue reading below for details about weeks 8 and 9
 
-###Ideally, the data set should:
+###Ideally, your data set should:
 * already be publicly available and not easily portable in map format (i.e. part of a PDF, web page, or Google Map)
 * consist of [longitude, latitude] "point data" (shapes or paths will be too advanced and not directly work with the base code)
 * not change frequently
-* not be something Google Maps already does 100% accurately
-* not be very tiny and not be too huge to maintain or render on a map
+* not be something Google Maps already does accurately and completely
+* be more than 5 points and not be too huge to maintain or bog down the rendering of a map 
 * be something you could help maintain in your free time, even after SC Code wraps up
 * be specific to Greenville city, Greenville county, or the Upstate
 * be complete (try to avoid picking something if you can't get all / most of the possible points)
@@ -28,6 +28,7 @@ The list below are more along the lines of what's expected. You're welcome to
 claim an existing idea by putting your name in the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
 Or, add your idea and name if you have something you'd like to do that's not on the list.
 
+* Libraries
 * Historic Sites
 * Parks
 * Parking Decks
@@ -42,7 +43,11 @@ Or, add your idea and name if you have something you'd like to do that's not on 
 * Tree Planting Sites
 * Public (K-12) Schools
 
-#Steps for Week 9
+#Goals for Week 9
+1. Fork a GitHub Project
+1. Setup a Cloud9 Workspace that talks with your GitHub fork
+1. Do a basic Git command and push to GitHub
+
 ###Steps on GitHub
 1. Decide on which data set you want to build
 1. Go to [our template GitHub project/repo](https://github.com/codeforgreenville/leaflet-google-sheets-template) and click "Fork" in the top-left
@@ -77,6 +82,6 @@ Or, add your idea and name if you have something you'd like to do that's not on 
 
 ###Steps to Continue
 1. Go back to your fork page on GitHub and refresh the page. You should no longer see the deleted file and you should notice your commit message.
-1. You'll see a README.md file in the list of files on GitHub. Click that and start reading for more details on how to proceed.
-1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This just means changes were made to project / repo youy forked. You're on your own now and don't need to keep in sync with the fork's origin.
+1. You'll see a README.md file in the list of files on GitHub. Click it and start reading for more details on how we'll proceed on creating a public spreadsheet and creating a Leaflet map.
+1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
