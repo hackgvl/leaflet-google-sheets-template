@@ -12,12 +12,7 @@
 
 Things like Greenville restaurants or Greenville malls would not be ideal.
 
-<<<<<<< HEAD
-
-### Map Layer Guidance
-=======
 ###Map Layer Guidance
->>>>>>> e91b7a118e54c64f0e7349f77be19a1193035017
 
 The list below are more along the lines of what's expected. You're welcome to
 claim this idea by putting your name in the (open data spreadsheet)[https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412]
