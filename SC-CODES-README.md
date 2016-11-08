@@ -6,14 +6,14 @@
 1. Continue reading below for next steps for weeks 8 and 9
 
 ###Ideally, the data set should:
-* already be publicly available and not easily portable (i.e. part of a PDF, web page, or Google Map)
-* consist of latitude, longitude "point data" (shapes or paths will be too advanced and not directly work with the base code)
-* not frequently changing
-* not be something Google Maps already does well
-* not be very tiny or too huge to be practical to render in a map or to maintain
-* be something you could help maintain even after SC Code wraps up
+* already be publicly available and not easily portable in map format (i.e. part of a PDF, web page, or Google Map)
+* consist of [longitude, latitude] "point data" (shapes or paths will be too advanced and not directly work with the base code)
+* not change frequently
+* not be something Google Maps already does 100% accurately
+* not be very tiny and not be too huge to maintain or render on a map
+* be something you could help maintain in your free time, even after SC Code wraps up
 * be specific to Greenville city, Greenville county, or the Upstate
-* be complete (try to avoid picking something if you can't get close to listing all / most of the possible points)
+* be complete (try to avoid picking something if you can't get all / most of the possible points)
 
 Non-profits, the City, and the County would be ideal examples of places to find existing data. In other cases, you may need to do the research / leg work to create the data.
 
