@@ -48,7 +48,7 @@ Now what?  Well, things get stale and maps die, that's what.
 
 Additions or changes to the spreadsheet will appear on a refreshed map somewhere between immediately and a few minutes later.
 
-The "CSV data source URL" to be used in the google-spreadsheet-to-geojson.php PHP script is slightly different and looks like
+The "CSV data source URL" to be used in the geojson.php PHP script is slightly different and looks like
 ``https://docs.google.com/spreadsheet/pub?key={key - bunch or random numbers and letters}&single=true&gid={tab id}&output=csv``
 
 If you want the first tab then use *gid=0* above. If you want to point at another tab then open that tab in you browser and look in the URL for *gid=##########* and use that *gid* value.
