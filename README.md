@@ -1,4 +1,4 @@
-### Why?
+popuphtml### Why?
 Go to Google Maps, zoom into Greenville, SC and type "bike racks" or "dog parks". If you're lucky you get decent info, but inevitably you'll be looking at incomplete or irrelavant results. You may even get advertisments.
 
 This is not to say we should make a public-version of Google Map. Actually, we already have that in OpenStreetMaps.
@@ -57,15 +57,16 @@ Use Google's *Share* function to give *Edit* permissions. You should consider al
 
 ### Using PHP to Convert a Google Sheets CSV to a GeoJSON File
 The "CSV data source URL" to be used in the geojson.php PHP script is the URL from the Publish to Web step
+
 ex. ``https://docs.google.com/spreadsheets/d/{a-bunch-of-random-numbers-and-letters}/pub?output=csv``
 
 Insert that URL in the $googleSpreadsheetUrl variable near the top of geojson.php
 
 The column values are used in this example to generate the GeoJSON are hard-coded to include 4 fields: longitude, latitude, title, and notes.
 
-If you need more columns / fields to your spreadsheet then you can add additional *properties* in your geojson.php under the $features['properties'] array section and then in the ``popuphtml`` variable inside of index.html 
+If you need more columns / fields to your spreadsheet then you can add additional *properties* in your geojson.php under the ``$features['properties']`` array section and then include them in the map pop-up bubble by modifying the ``popuphtml`` variable within index.html 
 
-You'd be best not to change order of the latitude and longitude columns in the spreadsheet.  If you must change the orderthen you'd need to modify the corresponding code in geojson.php and index.html
+You'd be best not to change order of the latitude and longitude columns in the spreadsheet.  If you must change the order then you'd need to modify the corresponding code in geojson.php and index.html
 
 ### Getting Longitude and Latitude
 
