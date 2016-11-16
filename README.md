@@ -40,18 +40,19 @@ Now what?  Well, things get stale and maps die, that's what.
 * Rename your copy and start adding real "point" data, including geographic coordinates (longitude, latitude) and other properties
 
 ### Publish Your Google Spreadsheet
-* Go to (File -> Publish to Web) and do the following
-* "Entire Document" (unless you only want to publish one tab, in which case select the tab)
-* "Comma-seperated values (.csv)
-* Click Publish
-* Save the URL provided. It will look like https://docs.google.com/spreadsheets/d/**{key - bunch or random numbers and letters}**/pub?output=csv
+* Go to (File -> Publish to Web).
+* There are two drop-down boxes near the top of the box that opens.
+* For the left drop-down box select "Entire Document"
+* For the right drop-down box select "Comma-seperated values (.csv)
+* Now click the Publish button
+* A URL will be provided. It looks like https://docs.google.com/spreadsheets/d/{a-bunch-of-random-numbers-and-letters}/pub?output=csv
 
 Additions or changes to the spreadsheet will appear on a refreshed map somewhere between immediately and a few minutes later.
 
 The "CSV data source URL" to be used in the geojson.php PHP script is slightly different and looks like
-``https://docs.google.com/spreadsheet/pub?key={key - bunch or random numbers and letters}&single=true&gid={tab id}&output=csv``
+``https://docs.google.com/spreadsheets/d/{a-bunch-of-random-numbers-and-letters}/pub?output=csv``
 
-If you want the first tab then use *gid=0* above. If you want to point at another tab then open that tab in you browser and look in the URL for *gid=##########* and use that *gid* value.
+You should plan on only having 1 tab in the spreadsheet. However, if for some reason you want to point at the data in the second tab within the spreadsheet then open that tab in you browser and look in the URL for *gid=##########*. You would need to append ``&gid={your-tabs-gid-here}&single=true`` to the end of the CSV URL above to target that tab.
 
 ### Allowing Other People to Help Curate the Data
 
