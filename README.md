@@ -105,7 +105,7 @@ example http://leafletjs.com/examples/geojson.html
 ### Testing in Cloud 9
 * After [forking this base project and setup a C9 workspace](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/SC-CODES-README.md)
 * Save your changes (File-> Save or Ctrl + S)
-* Click Run Project and it will fire up an Apache web service running your environment
+* Click green Run icon near the top of the C9 workspace and it will fire up an Apache web service running your environment
 * On the command line at the bottom of C9 you'll see a message like ``Starting Apache httpd, serving https://leaflet-wi-fi-map-allella.c9users.io/`` (your public workspace URL)
 * Visit your public workspace URL in a new browser tab and you should see your map with the points specified in the spreadsheet
 
