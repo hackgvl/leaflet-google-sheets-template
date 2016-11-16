@@ -49,9 +49,6 @@ Now what?  Well, things get stale and maps die, that's what.
 
 Additions or changes to the spreadsheet will appear on a refreshed map somewhere between immediately and a few minutes later.
 
-The "CSV data source URL" to be used in the geojson.php PHP script is slightly different and looks like
-``https://docs.google.com/spreadsheets/d/{a-bunch-of-random-numbers-and-letters}/pub?output=csv``
-
 You should plan on only having 1 tab in the spreadsheet. However, if for some reason you want to point at the data in the second tab within the spreadsheet then open that tab in you browser and look in the URL for *gid=##########*. You would need to append ``&gid={your-tabs-gid-here}&single=true`` to the end of the CSV URL above to target that tab.
 
 ### Allowing Other People to Help Curate the Data
@@ -59,10 +56,16 @@ You should plan on only having 1 tab in the spreadsheet. However, if for some re
 Use Google's *Share* function to give *Edit* permissions. You should consider allowing "Anyone with the link" to edit the data and then all you need to do is share the edit URL with trusted people.
 
 ### Using PHP to Convert a Google Sheets CSV to a GeoJSON File
-Take the "CSV data source URL" you just constructed and insert it in the $googleSpreadsheetUrl variable near the top of geojson.php
+The "CSV data source URL" to be used in the geojson.php PHP script is the URL from the Publish to Web step
+ex. ``https://docs.google.com/spreadsheets/d/{a-bunch-of-random-numbers-and-letters}/pub?output=csv``
+
+Insert that URL in the $googleSpreadsheetUrl variable near the top of geojson.php
 
 The column values are used in this example to generate the GeoJSON are hard-coded to include 4 fields: longitude, latitude, title, and notes.
-If you need more fields you can add additional *properties* in your geojson.php under the $features['properties'] array section.
+
+If you need more columns / fields to your spreadsheet then you can add additional *properties* in your geojson.php under the $features['properties'] array section and then in the ``popuphtml`` variable inside of index.html 
+
+You'd be best not to change order of the latitude and longitude columns in the spreadsheet.  If you must change the orderthen you'd need to modify the corresponding code in geojson.php and index.html
 
 ### Getting Longitude and Latitude
 
