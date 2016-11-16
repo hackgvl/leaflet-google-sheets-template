@@ -1,4 +1,4 @@
-popuphtml### Why?
+### Why?
 Go to Google Maps, zoom into Greenville, SC and type "bike racks" or "dog parks". If you're lucky you get decent info, but inevitably you'll be looking at incomplete or irrelavant results. You may even get advertisments.
 
 This is not to say we should make a public-version of Google Map. Actually, we already have that in OpenStreetMaps.
