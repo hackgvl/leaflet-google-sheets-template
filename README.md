@@ -81,15 +81,17 @@ it's necessary to [register an account with MapQuest. Up to 15,000 views a month
 
 ### Registering for Map Tiles
 
-The base project includes a MapQuest key but ideally you should register your own free account and use your own key
-to avoid exhausting this base key if too many people start using or abusing it.
+The base project includes a MapQuest key (key=bA5WISoAPsk5r0GJ3hHGTkAMFEskFOA2) in the index.html.
+
+Ideally you should register your own free account and use your own key to avoid exhausting this base key if too many people start using or abusing it.
 
 If using Mapquest then after registering for an account do the following:
 * [Login to your developer account](https://developer.mapquest.com/user/login)
 * Go to Keys and Reporting
 * Register a new Application. Give it a name. The callback may not be necessary. Save the application
 * Click on the "Application" you created and copy the "Consumer Key", NOT the secret.
-* You'll use that key value in the index.html Sin the MapQuest ``<script>`` tag where it says =PASTEYOURMAPQUESTKEYHERE
+* You'll use your new key value in the index.html in the MapQuest ``<script>`` tag
+* Replace the existing key with your key where is says ``key=bA5WISoAPsk5r0GJ3hHGTkAMFEskFOA2``
 
 
 If you register with CloudMade you can use their map tiles instead, as described by Leaflet 
