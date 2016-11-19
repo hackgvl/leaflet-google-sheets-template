@@ -43,6 +43,7 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 * Public (K-12) Schools
 
 #Goals for Week 9
+1. Complete the Week 8 goals above, including the steps from the main [README](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
 1. Do a basic Git command and push to GitHub
