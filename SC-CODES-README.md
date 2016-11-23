@@ -96,7 +96,7 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 1. Add a Git upstream, merge in changes from the upstream, resolve a simple merge conflict
 
 ### Share Your Work
-Please share your GitHub repository and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) in the yellow highlighted boxes
+Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) in the yellow highlighted boxes
 
 Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/maps/, which will become the reliable, hosted location for the public.
 
