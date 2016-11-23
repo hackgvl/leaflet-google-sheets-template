@@ -93,15 +93,15 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 
 ##<a name="week10">Goals for Week 10</a>
 1. Add your GitHub repository, geojson.php URL, and Google Sheet URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
-1. Git add, commit, and push your changes from Cloud 9 up to GitHub
+1. Git add, commit, and push your changes from Cloud 9 up to GitHub.
 
 ### Share Your Work
-Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) in the yellow highlighted boxes
+Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) in the yellow highlighted boxes.
 
 Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/maps/, which will become the reliable, hosted location for the public.  If/as you modify the project in the future we'd be able to easily pull your changes to https://data.openupstate.org/maps/
 
 ### Git Commit and Push
-In week 9 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using git.
+In week 9 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using Git.
 
 Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
 
@@ -133,9 +133,11 @@ We're going to tell Git where to find the ["remote upstream"](https://help.githu
 
 Run ``git branch -a`` again and you'll see a new branch "remotes/upstream/master"
 
-Now we want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/). This will create a new Git "branch" within your Cloud 9 Workspace. Note, you won't see anything change within Cloud 9, but there's a copy that Git knows about.
+We want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/).
 
 ``git fetch upsteam``
+
+This fetched the latest upstream code into a branch within your Cloud 9 environment. Note, you won't see anything change within Cloud 9, but your local Git has a copy of the upstream master branch at your disposal.
 
 Now merge the upstream code into your code.
 ``git merge upstream/master``
