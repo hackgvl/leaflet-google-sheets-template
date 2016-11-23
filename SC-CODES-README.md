@@ -2,7 +2,7 @@
 * Jump to [Week 8](#week8)
 * Jump to [Week 9](#week9)
 * Jump to [Week 10](#week10)
-* Jump to [Week 11+](#week11)
+* Jump to [Week 11-12](#week11)
 
 ##<a name="week8">Goals for Week 8</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
@@ -141,7 +141,7 @@ Congratulations, you've done your first "merge" and resolved a "merge conflict".
 
 Side note, knowing how to use a remote upstream is one of the steps for creating a ["pull request"](https://help.github.com/articles/creating-a-pull-request/). A pull request is how GitHub allows you to propose a merge into someone's GitHub repository. For instance, if you wanted to contribute a fix to an open-source project that hosts its code on GitHub.
 
-##<a name="week11">Goals for Week 11+ (Optional)</a>
+##<a name="week11">Goals for Week 11-12 (Optional)</a>
 Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
 
 Here are sample ideas. Be aware of cross-origin issues if you're trying to load GeoJSON across domains using javascript.
