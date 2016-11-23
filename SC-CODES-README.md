@@ -93,19 +93,36 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 
 ##<a name="week10">Goals for Week 10</a>
 1. Add your GitHub repository, geojson.php URL, and Google Sheet URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
-1. Add a Git upstream, merge in changes from the upstream, resolve a simple merge conflict
+1. Git add, commit, and push your changes from Cloud 9 up to GitHub
 
 ### Share Your Work
 Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) in the yellow highlighted boxes
 
 Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/maps/, which will become the reliable, hosted location for the public.  If/as you modify the project in the future we'd be able to easily pull your changes to https://data.openupstate.org/maps/
 
+### Git Push Origin Master
+In week 9 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using git.
+
+Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
+
+In the terminal, run ``git status`` and Git will tell you about the modified files. These are "Changes not staged for commit".
+
+Run ``git add index.html`` and then ``git add geojson.php`` to stage the files for commiting.
+
+Run ``git status`` again and it will show the files under "Changes to be committed"
+
+Commit the staged changes using ``git commit -m 'Customized Leaflet and PHP GeoJSON files to pull from my own Google Spreadsheet and get the map working'``
+
+Now let GitHub know about your commit by running ``git push origin master`` or the shortcut ``git push``
+
+##<a name="week11">Goals for Week 11-12 (Optional)</a>
+1. Add a Git upstream, merge in changes from the upstream, resolve a simple merge conflict
+1. Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
+
 ###Git Upstream, Merge, Conflict Resolution
 When you fork a GitHub repository it's often, but not always, that you want to merge changes from original project back into your copy. In this case the original repo is called the "upstream".
 
 As a simple example, the README.md and SC-CODES-README.md have been changed in the upstream since you forked. Let's merge in the changes.
-
-Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
 
 Right now you have a single master branch and a link to the remote origin master (on GitHub). You can see this by listing all the branches Git knows about. 
 
@@ -121,7 +138,6 @@ Now we want to grab a copy of the [remote upstream](https://help.github.com/arti
 
 Now merge the upstream code into your code.
 ``git merge upstream/master``
-
 
 You'll see a message like "CONFLICT (modify/delete): SC-CODES-README.md deleted in HEAD and modified in upstream/master. Version upstream/master of SC-CODES-README.md left in tree. Automatic merge failed; fix conflicts and then commit the result."
 
@@ -142,9 +158,6 @@ Push the commit up to the GitHub remote copy
 Congratulations, you've done your first "merge" and resolved a "merge conflict".
 
 Side note, knowing how to use a remote upstream is one of the steps for creating a ["pull request"](https://help.github.com/articles/creating-a-pull-request/). A pull request is how GitHub allows you to propose a merge into someone's GitHub repository. For instance, if you wanted to contribute a fix to an open-source project that hosts its code on GitHub.
-
-##<a name="week11">Goals for Week 11-12 (Optional)</a>
-Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
 
 Here are sample ideas. Be aware of cross-origin issues if you're trying to load GeoJSON across domains using javascript.
 
