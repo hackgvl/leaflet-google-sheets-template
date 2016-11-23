@@ -146,6 +146,8 @@ Choose your adventure if you want to flex your coding skills on more advanced ma
 
 Here are sample ideas.
 
+Be aware of cross-origin issues if you're trying to load GeoJSON across domains.
+
 1. Create a new layers.html file in your C9 workspace and add another student's geojson.php as a second Leaflet layer
-1. Build an equivalent [Google Map by loading your geojson.php as a layer](https://developers.google.com/maps/documentation/javascript/datalayer#load_geojson)
+1. Build an equivalent [Google Map by loading your geojson.php as a layer](https://developers.google.com/maps/documentation/javascript/datalayer#load_geojson) by creating a googlemap.html in Cloud9. 
 1. Test out other [Leaflet functions](http://leafletjs.com/reference-1.0.2.html)
