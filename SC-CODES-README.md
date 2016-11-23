@@ -1,4 +1,9 @@
-#Goals for Week 8
+#SC Code Week 8-12 Goals
+* Jump to [Week 8](#week8)
+* Jump to [Week 9](#week9)
+* Jump to [Weeks 10+](#week10)
+
+##<a name="week8">Goals for Week 8</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 1. Start thinking about ideas for open/public data you'd like to gather and share with the world.
@@ -23,9 +28,9 @@ Bad Examples: Things like Greenville restaurants, potholes, or vape shops. These
 
 ###Map Data Ideas and Staking Your Claim
 
-Below is intended to seed your brain. If it sparks an idea of your own then add your idea and name to the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
+Below is intended to seed your brain. If it sparks an idea of your own then add your idea and name to the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
 
-If nobody else has claimed a suggested idea then you're welcome to take it by putting your name beside in [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=30878412)
+If nobody else has claimed a suggested idea then you're welcome to take it by putting your name beside in [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
 
 * Libraries
 * Historic Sites
@@ -42,7 +47,7 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 * Tree Planting Sites
 * Public (K-12) Schools
 
-#Goals for Week 9
+##<a name="week9">Goals for Week 9</a>
 1. Complete the Week 8 goals above, including the steps from the main [README](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
@@ -85,3 +90,10 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 1. You'll see a README.md file in the list of files on GitHub. Click it and start reading for more details on how we'll proceed on creating a public spreadsheet and creating a Leaflet map.
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
+##<a name="week10">Goals for Week 10+</a>
+1. Add your GitHub repository and Google Sheet URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
+1. Add a Git upstream, merge in changes from the upstream, resolve a simple merge conflict
+1. (Optional) Try more advanced mapping concepts
+
+### Share Your Work
+Please share your GitHub repository and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) in the yellow highlighted boxes
