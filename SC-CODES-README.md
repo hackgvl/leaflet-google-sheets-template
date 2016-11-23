@@ -107,6 +107,8 @@ Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
 
 In the terminal, run ``git status`` and Git will tell you about the modified files. These are "Changes not staged for commit".
 
+You can also run ``git diff`` to see a "differential" of what's modified but not yet "staged" . You can use the arrow up/down or page up/down keys to scroll through the diff. There are + and - symbols showing which lines in the code are new or removed.  Press ESC to exit the diff tool.
+
 Run ``git add index.html`` and then ``git add geojson.php`` to stage the files for commiting.
 
 Run ``git status`` again and it will show the files under "Changes to be committed"
