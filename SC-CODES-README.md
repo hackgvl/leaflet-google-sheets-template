@@ -100,7 +100,7 @@ Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the 
 
 Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/maps/, which will become the reliable, hosted location for the public.  If/as you modify the project in the future we'd be able to easily pull your changes to https://data.openupstate.org/maps/
 
-### Git Push Origin Master
+### Git Commit and Push
 In week 9 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using git.
 
 Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
@@ -113,11 +113,12 @@ Run ``git status`` again and it will show the files under "Changes to be committ
 
 Commit the staged changes using ``git commit -m 'Customized Leaflet and PHP GeoJSON files to pull from my own Google Spreadsheet and get the map working'``
 
-Now let GitHub know about your commit by running ``git push origin master`` or the shortcut ``git push``
+Now let your GitHub repo know about your commit by running ``git push origin master`` or the shortcut ``git push``
+The repo on GitHub is configured as your git remote "origin" and you only have a single "master" branch, hence pushing to origin master sends changes from your master branch up to GitHub.
 
-##<a name="week11">Goals for Week 11-12 (Optional)</a>
+##<a name="week11">Goals for Week 11-12</a>
 1. Add a Git upstream, merge in changes from the upstream, resolve a simple merge conflict
-1. Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
+1. (Optional) Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
 
 ###Git Upstream, Merge, Conflict Resolution
 When you fork a GitHub repository it's often, but not always, that you want to merge changes from original project back into your copy. In this case the original repo is called the "upstream".
