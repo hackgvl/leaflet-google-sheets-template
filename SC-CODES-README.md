@@ -2,7 +2,7 @@
 * Jump to [Week 8](#week8)
 * Jump to [Week 9](#week9)
 * Jump to [Week 10](#week10)
-* Jump to [Weeks 11+](#week11)
+* Jump to [Week 11+](#week11)
 
 ##<a name="week8">Goals for Week 8</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
