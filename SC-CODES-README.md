@@ -144,9 +144,7 @@ Side note, knowing how to use a remote upstream is one of the steps for creating
 ##<a name="week11">Goals for Week 11+ (Optional)</a>
 Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
 
-Here are sample ideas.
-
-Be aware of cross-origin issues if you're trying to load GeoJSON across domains.
+Here are sample ideas. Be aware of cross-origin issues if you're trying to load GeoJSON across domains using javascript.
 
 1. Create a new layers.html file in your C9 workspace and add another student's geojson.php as a second Leaflet layer
 1. Build an equivalent [Google Map by loading your geojson.php as a layer](https://developers.google.com/maps/documentation/javascript/datalayer#load_geojson) by creating a googlemap.html in Cloud9. 
