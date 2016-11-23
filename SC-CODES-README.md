@@ -101,11 +101,11 @@ Please share your GitHub repository and Google Spreadsheet in the [open data lis
 ###Git Upstream, Merge, Conflict Resolution
 When you fork a GitHub repository it's often, but not always, that you want to merge changes from original project back into your copy. In this case the original repo is called the "upstream".
 
-As a simple example, the README.md and SC-CODES-README.md have been changed in the since you forked. Let's merge in the changes.
+As a simple example, the README.md and SC-CODES-README.md have been changed in the upstream since you forked. Let's merge in the changes.
 
 Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
 
-Right now you have a single master branch and a link to the remote origin master (on GitHub). You can see this by running 
+Right now you have a single master branch and a link to the remote origin master (on GitHub). You can see this by listing all the branches Git knows about. 
 
 In the terminal, run ``git branch -a``
 
@@ -113,7 +113,7 @@ We're going to tell Git where to find the ["remote upstream"](https://help.githu
 
 Run ``git branch -a`` again and you'll see a new branch "remotes/upstream/master"
 
-Now we want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/). This will create a new Git "branch" within your Cloud 9 Workspace
+Now we want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/). This will create a new Git "branch" within your Cloud 9 Workspace. Note, you won't see anything change within Cloud 9, but there's a copy that Git knows about.
 
 ``git fetch upsteam``
 
@@ -129,7 +129,7 @@ Let's tell Git that we still don't care need a copy of SC-CODES-README.md in our
 
 You'll also see that the upstream changed the README.md.  You can compare what changed between your fork and the upstream README.md by running ``git diff README.md``
 
-We want to keep these merged changes, so tell git to add those changes ``git add README.md``
+We want to keep these merged README.md changes, so tell git to add them ``git add README.md``
 
 Instruct git to commit these changes
 ``git commit -m 'Merge in the README.md from the remote upstream'``
@@ -139,5 +139,5 @@ Push the commit up to the GitHub remote copy
 
 Congratulations, you've done your first "merge" and resolved a "merge conflict".
 
-Even more exciting, knowing how to use a remote upstream is one of the steps if you want to create a ["pull request"](https://help.github.com/articles/creating-a-pull-request/) a propose a change to someone's GitHub repository, like contributing to an open-source project.
+Side note, knowing how to use a remote upstream is one of the steps for creating a ["pull request"](https://help.github.com/articles/creating-a-pull-request/). A pull request is how GitHub allows you to propose a merge into someone's GitHub repository. For instance, if you wanted to contribute a fix to an open-source project that hosts its code on GitHub.
 
