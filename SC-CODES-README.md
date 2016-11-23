@@ -109,11 +109,11 @@ Right now you have a single master branch and a link to the remote origin master
 
 In the terminal, run ``git branch -a``
 
-We're going to tell Git where to find the ("remote upstream")[https://help.github.com/articles/configuring-a-remote-for-a-fork/] pointing at our (https://github.com/codeforgreenville/leaflet-google-sheets-template)[original template project] by running ``git remote add upstream https://github.com/codeforgreenville/leaflet-google-sheets-template.git``
+We're going to tell Git where to find the ["remote upstream"](https://help.github.com/articles/configuring-a-remote-for-a-fork/) pointing at our [original template project](https://github.com/codeforgreenville/leaflet-google-sheets-template) by running ``git remote add upstream https://github.com/codeforgreenville/leaflet-google-sheets-template.git``
 
 Run ``git branch -a`` again and you'll see a new branch "remotes/upstream/master"
 
-Now we want to grab a copy of the (https://help.github.com/articles/syncing-a-fork/)[remote upstream]. This will create a new Git "branch" within your Cloud 9 Workspace
+Now we want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/). This will create a new Git "branch" within your Cloud 9 Workspace
 
 ``git fetch upsteam``
 
@@ -123,7 +123,7 @@ Now merge the upstream code into your code.
 
 You'll see a message like "CONFLICT (modify/delete): SC-CODES-README.md deleted in HEAD and modified in upstream/master. Version upstream/master of SC-CODES-README.md left in tree. Automatic merge failed; fix conflicts and then commit the result."
 
-Run ``git status`` to see more information. It will show a (https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/)["merge conflict"].  On the one hand, you deleted (in week 9) the SC-CODES-README.md file while the upstream still has a copy which was also edited since you forked it.
+Run ``git status`` to see more information. It will show a ["merge conflict"](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/).  On the one hand, you deleted (in week 9) the SC-CODES-README.md file while the upstream still has a copy which was also edited since you forked it.
 
 Let's tell Git that we still don't care need a copy of SC-CODES-README.md in our fork by removing the merged in changes ``git rm SC-CODES-README.md``
 
@@ -139,5 +139,5 @@ Push the commit up to the GitHub remote copy
 
 Congratulations, you've done your first "merge" and resolved a "merge conflict".
 
-Even more exciting, knowing how to use a remote upstream is one of the steps if you want to create a (https://help.github.com/articles/creating-a-pull-request/)["pull request"] a propose a change to someone's GitHub repository, like contributing to an open-source project.
+Even more exciting, knowing how to use a remote upstream is one of the steps if you want to create a ["pull request"](https://help.github.com/articles/creating-a-pull-request/) a propose a change to someone's GitHub repository, like contributing to an open-source project.
 
