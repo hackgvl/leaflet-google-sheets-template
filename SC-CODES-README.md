@@ -49,10 +49,11 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 * Public (K-12) Schools
 
 ##<a name="week9">Goals for Week 9</a>
-1. Complete the Week 8 goals above, including the steps from the main [README](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
+1. Complete the Week 8 goals above
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
 1. Do a basic Git command and push to GitHub
+1. Get the map and spreadsheet working together
 
 ###Steps on GitHub
 1. Decide on which data set you want to build
@@ -85,10 +86,10 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 1. Run ``git status`` and you'll see that git is ready for you to permanently commit your changes (1 deleted file).
 1. Run ``git commit -m 'Deleted an SC Codes related README file'``
 1. To push this commit up to the GitHub fork repository you now need to run ``git push``
-
-###Steps to Continue
 1. Go back to your fork page on GitHub and refresh the page. You should no longer see the deleted file and you should notice your commit message.
-1. Read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
+
+###Steps to Get the Map and Spreadsheet Working
+1. Now, read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
 ##<a name="week10">Goals for Week 10</a>
