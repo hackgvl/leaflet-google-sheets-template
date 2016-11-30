@@ -165,8 +165,10 @@ Congratulations, you've done your first "merge" and resolved a "merge conflict".
 
 Side note, knowing how to use a remote upstream is one of the steps for creating a ["pull request"](https://help.github.com/articles/creating-a-pull-request/). A pull request is how GitHub allows you to propose a merge into someone's GitHub repository. For instance, if you wanted to contribute a fix to an open-source project that hosts its code on GitHub.
 
+### Optional Advanced Map Challenges
 Here are sample ideas. Be aware of cross-origin issues if you're trying to load GeoJSON across domains using javascript.
 
 1. Create a new layers.html file in your C9 workspace and add another student's geojson.php as a second Leaflet layer
+1. Add [custom map icons in Leaflet](http://leafletjs.com/examples/custom-icons/)
 1. Build an equivalent [Google Map by loading your geojson.php as a layer](https://developers.google.com/maps/documentation/javascript/datalayer#load_geojson) by creating a googlemap.html in Cloud9. 
 1. Test out other [Leaflet functions](http://leafletjs.com/reference-1.0.2.html)
