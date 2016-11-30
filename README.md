@@ -76,13 +76,19 @@ Non-programming / manual ways to get latitude and longitude numbers
 * (Hard, but good for looking up lots of data) If you know how to do custom functions in Google Sheets then you can [convert an address into latitude and longitude](https://ctrlq.org/code/19992-google-maps-functions-for-google-script) with some customization.
 
 ### Render a Leaflet Map Showing the GeoJSON Data
-The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will 
-render the GeoJSON data. The magic line for loading a single layer map is 
+The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will render the GeoJSON data. The magic line for loading a single layer map is 
 
 var geoJsonData = JSON.parse(readJSON('geojson.php'));
 
 Leaflet JS is using open MapQuest tiles. [As of July 2016](http://devblog.mapquest.com/2016/06/15/modernization-of-mapquest-results-in-changes-to-open-tile-access/),
 it's necessary to [register an account with MapQuest. Up to 15,000 views a month is free](https://developer.mapquest.com/plans).
+
+### Testing in Cloud 9
+* After [forking this base project and setup a C9 workspace](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/SC-CODES-README.md)
+* Save your changes (File-> Save or Ctrl + S)
+* Click green Run icon near the top of the C9 workspace and it will fire up an Apache web service running your environment
+* On the command line at the bottom of C9 you'll see a message like ``Starting Apache httpd, serving https://leaflet-wi-fi-map-allella.c9users.io/`` (your public workspace URL)
+* Visit your public workspace URL in a new browser tab and you should see your map with the points specified in the spreadsheet. This is showing you the index.html where the map is rendered.
 
 ### Registering for Map Tiles
 
@@ -101,13 +107,6 @@ If using Mapquest then after registering for an account do the following:
 
 If you register with CloudMade you can use their map tiles instead, as described by Leaflet 
 example http://leafletjs.com/examples/geojson.html
-
-### Testing in Cloud 9
-* After [forking this base project and setup a C9 workspace](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/SC-CODES-README.md)
-* Save your changes (File-> Save or Ctrl + S)
-* Click green Run icon near the top of the C9 workspace and it will fire up an Apache web service running your environment
-* On the command line at the bottom of C9 you'll see a message like ``Starting Apache httpd, serving https://leaflet-wi-fi-map-allella.c9users.io/`` (your public workspace URL)
-* Visit your public workspace URL in a new browser tab and you should see your map with the points specified in the spreadsheet
 
 ### Multiple Layers and Advanced Leaflet
 [Leaflet has a bunch of other plug-ins and options](http://leafletjs.com/reference-1.0.0.html), so the maps can be tweaked in all sorts of ways.
