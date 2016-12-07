@@ -138,7 +138,7 @@ Run ``git branch -a`` again and you'll see a new branch "remotes/upstream/master
 
 We want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/).
 
-``git fetch upsteam``
+``git fetch upstream``
 
 This fetched the latest upstream code into a branch within your Cloud 9 environment. Note, you won't see anything change within Cloud 9, but your local Git has a copy of the upstream master branch at your disposal.
 
