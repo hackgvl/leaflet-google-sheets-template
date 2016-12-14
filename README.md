@@ -1,3 +1,5 @@
+See https://data.openupstate.org/maps/ for existing open Greenville map layers and GeoJSON data.
+
 ### Why?
 Go to Google Maps, zoom into Greenville, SC and type "bike racks" or "dog parks". If you're lucky you get decent info, but inevitably you'll be looking at incomplete or irrelavant results. You may even get advertisments.
 
