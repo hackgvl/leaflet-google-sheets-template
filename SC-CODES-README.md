@@ -45,7 +45,7 @@ If nobody else has claimed a suggested idea then you're welcome to take it by pu
 * Public (K-12) Schools
 
 ##<a name="week3">Goals for Week 3</a>
-1. Complete the Week 8 goals above
+1. Complete the Week 2 goals above
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
 1. Do a basic Git command and push to GitHub
