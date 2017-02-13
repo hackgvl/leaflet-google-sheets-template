@@ -19,15 +19,15 @@
 
 Non-profits, the City, and the County would be ideal examples of places to find existing public data that's trapped. In other cases, you may need to do the research / leg work to create the data.
 
-Good example: The [City has a map of parking decks](http://www.greenvillesc.gov/513/Parking) but the data is stuck inside of the embedded Google map at the bottom. You can't easily take that map and easily pull it into a Leaflet layer.  Wouldn't it be great if it was a real-time GeoJSON based Leaflet map pulling from your project? (Answer: yes)
+Good example: The [City has a map of parking decks](http://www.greenvillesc.gov/513/Parking) but the data was stuck inside of the embedded Google map at the bottom. You can't easily take that map and pull it into your own map.  Wouldn't it be great if it was a real-time GeoJSON-based data layer? (Answer: yes)
 
 Bad Examples: Things like Greenville restaurants, potholes, or vape shops. These change frequently and/or are already done well enough by other services.
 
 ###Map Data Ideas and Staking Your Claim
 
-Below is intended to seed your brain. If it sparks an idea of your own then add your idea and name to the [open data spreadsheet](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
+Below is intended to seed your brain. The [first class of SC Codes implemented many of the ideas below](https://data.openupstate.org/maps/) so this class will have to put more effort into original ideas.
 
-If nobody else has claimed a suggested idea then you're welcome to take it by putting your name beside in [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
+Please review the existing layers and add your name and idea to [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) to reserve
 
 * Libraries
 * Historic Sites
