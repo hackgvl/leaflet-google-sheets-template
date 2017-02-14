@@ -1,4 +1,4 @@
-#SC Code Week Project Goals
+#SC Codes Week Project Goals
 
 ##<a name="week2">Goals for Week 2</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
@@ -44,7 +44,7 @@ Please review the existing layers and add your name and idea to [the list](https
 * Tree Planting Sites
 * Public (K-12) Schools
 
-##<a name="week3">Goals for Week 3</a>
+##<a name="week3">Goals for Weeks 3-5</a>
 1. Complete the Week 2 goals above
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
@@ -88,7 +88,7 @@ Please review the existing layers and add your name and idea to [the list](https
 1. Now, read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
-##<a name="week4">Goals for Week 4</a>
+##<a name="week6">Goals for Week 6-8</a>
 1. Add your GitHub repository, geojson.php URL, and Google Sheet URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
 1. Git add, commit, and push your changes from Cloud 9 up to GitHub.
 
@@ -98,7 +98,7 @@ Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the 
 Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/maps/, which will become the reliable, hosted location for the public.  If/as you modify the project in the future we'd be able to easily pull your changes to https://data.openupstate.org/maps/
 
 ### Git Commit and Push
-In week 3 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using Git.
+In weeks 3-5 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using Git.
 
 Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
 
@@ -115,7 +115,7 @@ Commit the staged changes using ``git commit -m 'Customized Leaflet and PHP GeoJ
 Now let your GitHub repo know about your commit by running ``git push origin master`` or the shortcut ``git push``
 The repo on GitHub is configured as your git remote "origin" and you only have a single "master" branch, hence pushing to origin master sends changes from your master branch up to GitHub.
 
-##<a name="week7">Goals for Week 7</a>
+##<a name="week9">Goals for Week 9-10</a>
 1. Add a Git upstream, merge in changes from the upstream, resolve a simple merge conflict
 1. (Optional) Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
 
