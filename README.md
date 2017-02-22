@@ -3,7 +3,7 @@ See https://data.openupstate.org/maps/ for existing open Greenville map layers a
 ### Why?
 Go to Google Maps, zoom into Greenville, SC and type "bike racks" or "dog parks". If you're lucky you get decent info, but inevitably you'll be looking at incomplete or irrelavant results. You may even get advertisments.
 
-This is not to say we should make a public-version of Google Map. Actually, we already have that in OpenStreetMaps.
+This is not to say we should make a public-version of Google Map. Actually, we already have that in OpenStreetMap.
 
 Rather, lots of great public infomation is locked inside all maps, proprietary and open maps alike, in much the same way styling was locked inside of HTML before CSS.
 
