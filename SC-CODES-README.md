@@ -73,12 +73,12 @@ Please review the existing layers and add your name and idea to [the list](https
 ###Steps to Start Programming and using Git in Your Fancy C9 Workspace
 1. When your new workspace opens you'll see the terminal tab (the bottom-left tab) at the bottom of the screen. Drag the top line to make the terminal tab area larger and easier to see.
 1. This is a real Linux-style bash shell. You can type Linux commands in here, including Git commands.
-1. Type ``git config -l`` and press Enter. This will show various bits of info about the Git configuration of the active C9 workspace. Notice the "remote.origin.url" which should be pointing to your GitHub fork URL.
+1. Type ``git config -l`` (lower case L, not #1) and press Enter. This will show various bits of info about the Git configuration of the active C9 workspace. Notice the "remote.origin.url" which should be pointing to your GitHub fork URL.
 1. We'll run a basic git command as an example of using Git, GitHub, and the Cloud9 workspace.
 1. In the terminal tab type ``ls`` and you'll see a list of all the files in the current directory
 1. The ``SC-CODES-README.md`` file isn't necessary in your fork, since you already did all these steps. Let's delete it with Git and make that change reflect on your GitHub project
 1. In the terminal run ``git rm SC-CODES-README.md`` and press Enter. (Pro Tip: You could also type ``git rm SC`` and then hit tab key. The terminal shell will autocomplete the rest of the file name for you)
-1. Press the up arrow until you see the ``ls`` command again.  When you see it press Enter. This shows you two things: 1) the SC-CODES-README.md is now gone and 2) you can use the up / down arrows to scroll through recent commands
+1. Press the up arrow until you see the ``ls`` (lowercase LS) command again.  When you see it press Enter. This shows you two things: 1) the SC-CODES-README.md is now gone and 2) you can use the up / down arrows to scroll through recent commands
 1. Run ``git status`` and you'll see that git is ready for you to permanently commit your changes (1 deleted file).
 1. Run ``git commit -m 'Deleted an SC Codes related README file'``
 1. To push this commit up to the GitHub fork repository you now need to run ``git push``
