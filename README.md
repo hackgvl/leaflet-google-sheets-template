@@ -91,6 +91,7 @@ it's necessary to [register an account with MapQuest. Up to 15,000 views a month
 * Click green Run icon near the top of the C9 workspace and it will fire up an Apache web service running your environment
 * On the command line at the bottom of C9 you'll see a message like ``Starting Apache httpd, serving https://leaflet-wi-fi-map-allella.c9users.io/`` (your public workspace URL)
 * Visit your public workspace URL in a new browser tab and you should see your map with the points specified in the spreadsheet. This is showing you the index.html where the map is rendered.
+* You can also see your GeoJSON by adding /geojson.php to the end of your URL.
 
 ### Registering for Map Tiles
 
