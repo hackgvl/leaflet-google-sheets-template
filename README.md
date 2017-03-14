@@ -77,10 +77,8 @@ Non-programming / manual ways to get latitude and longitude numbers
 * (OK) In Google Maps zoom into a point. The URL in your browser will contain the center point's latitude and longitude (in that order) ex: 34.8509174,-82.3987371
 * (Hard, but good for looking up lots of data) If you know how to do custom functions in Google Sheets then you can [convert an address into latitude and longitude](https://ctrlq.org/code/19992-google-maps-functions-for-google-script) with some customization.
 
-### Render a Leaflet Map Showing the GeoJSON Data
-The index.html file loads the GeoJSON file into a local Javascript variable. Point this at your GeoJSON file and Leaflet will render the GeoJSON data. The magic line for loading a single layer map is 
-
-var geoJsonData = JSON.parse(readJSON('geojson.php'));
+### Rendering a Leaflet Map Showing the GeoJSON Data
+The index.html is where you look to see the actual map. There is already a line of code to load the geojson.php into a ``$geoJsonData`` Javascript variable and render that to the Leaflet map. So, all you have to do is open the index.html in your browser.
 
 Leaflet JS is using open MapQuest tiles. [As of July 2016](http://devblog.mapquest.com/2016/06/15/modernization-of-mapquest-results-in-changes-to-open-tile-access/),
 it's necessary to [register an account with MapQuest. Up to 15,000 views a month is free](https://developer.mapquest.com/plans).
