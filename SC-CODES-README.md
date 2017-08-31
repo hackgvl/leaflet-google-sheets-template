@@ -1,4 +1,4 @@
-#SC Codes Week Project Goals#
+#SC Codes Week Project Goals
 
 ##<a name="week2">Goals for Week 2</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
