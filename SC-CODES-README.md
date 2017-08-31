@@ -44,14 +44,14 @@ Please review the existing layers and add your name and idea to [the list](https
 * Tree Planting Sites
 * Public (K-12) Schools
 
-##<a name="week3">Goals for Weeks 3-5</a>
+## <a name="week3">Goals for Weeks 3-5</a>
 1. Complete the Week 2 goals above
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
 1. Do a basic Git command and push to GitHub
 1. Get the map and spreadsheet working together
 
-###Steps on GitHub
+### Steps on GitHub
 1. Decide on which data set you want to build
 1. Go to [our template GitHub project/repo](https://github.com/codeforgreenville/leaflet-google-sheets-template) and click "Fork" in the top-left
 1. We are [forking](https://help.github.com/articles/fork-a-repo/) with the intention of creating a starting point for your project. We will not get into "pull requests", but understand that people also fork projects as a way to create a branch/copy and then contribute back to the original project.
@@ -61,7 +61,7 @@ Please review the existing layers and add your name and idea to [the list](https
 1. In the "Repository name" box enter a name relevant to your data set. It should be 35 characters or less. Ex. ``gville-map-layer-parking-decks``
 1. Click the "Rename" button
 
-###Steps to Setup a C9.io Workspace that Uses Your GitHub Fork
+### Steps to Setup a C9.io Workspace that Uses Your GitHub Fork
 1. Go back to [your Cloud9 repositories](https://c9.io/account/repos) and refresh the page.
 1. The forked repository you created over at GitHub should be listed as an option.
 1. Click the "Clone to Edit" button associated with your fork repo.
@@ -70,7 +70,7 @@ Please review the existing layers and add your name and idea to [the list](https
 1. Click "Create workspace".
 1. The end result is that you've forked a project / repo in GitHub and now have a full copy of all the sample code. This means you can now start changing code and pushing your changes back up to your own GitHub fork.
 
-###Steps to Start Programming and using Git in Your Fancy C9 Workspace
+### Steps to Start Programming and using Git in Your Fancy C9 Workspace
 1. When your new workspace opens you'll see the terminal tab (the bottom-left tab) at the bottom of the screen. Drag the top line to make the terminal tab area larger and easier to see.
 1. This is a real Linux-style bash shell. You can type Linux commands in here, including Git commands.
 1. Type ``git config -l`` (lower case L, not #1) and press Enter. This will show various bits of info about the Git configuration of the active C9 workspace. Notice the "remote.origin.url" which should be pointing to your GitHub fork URL.
@@ -84,11 +84,11 @@ Please review the existing layers and add your name and idea to [the list](https
 1. To push this commit up to the GitHub fork repository you now need to run ``git push``
 1. Go back to your fork page on GitHub and refresh the page. You should no longer see the deleted file and you should notice your commit message.
 
-###Steps to Get the Map and Spreadsheet Working
+# Steps to Get the Map and Spreadsheet Working
 1. Now, read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
-##<a name="week6">Goals for Week 6-8</a>
+## <a name="week6">Goals for Week 6-8</a>
 1. Add your GitHub repository, geojson.php URL, and Google Sheet URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
 1. Git add, commit, and push your changes from Cloud 9 up to GitHub.
 
@@ -115,11 +115,11 @@ Commit the staged changes using ``git commit -m 'Customized Leaflet and PHP GeoJ
 Now let your GitHub repo know about your commit by running ``git push origin master`` or the shortcut ``git push``
 The repo on GitHub is configured as your git remote "origin" and you only have a single "master" branch, hence pushing to origin master sends changes from your master branch up to GitHub.
 
-##<a name="week9">Goals for Week 9-10</a>
+## <a name="week9">Goals for Week 9-10</a>
 1. Add a Git upstream, merge in changes from the upstream, resolve a simple merge conflict
 1. (Optional) Choose your adventure if you want to flex your coding skills on more advanced mapping concepts.
 
-###Git Upstream, Merge, Conflict Resolution
+### Git Upstream, Merge, Conflict Resolution
 When you fork a GitHub repository it's often, but not always, that you want to merge changes from original project back into your copy. In this case the original repo is called the "upstream".
 
 As a simple example, the README.md and SC-CODES-README.md have been changed in the upstream since you forked. Let's merge in the changes.
