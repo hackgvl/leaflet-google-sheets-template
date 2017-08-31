@@ -1,13 +1,13 @@
-#SC Codes Week Project Goals
+# SC Codes Week Project Goals
 
-##<a name="week2">Goals for Week 2</a>
+## <a name="week2">Goals for Week 2</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 1. Start thinking about ideas for open/public data you'd like to gather and share with the world.
 1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
 1. Continue reading below for details about weeks 2 and 3
 
-###Ideally, your data set should:
+### Ideally, your data set should:
 * already be publicly discoverable
 * consist of [longitude, latitude] "point data" (shapes or paths will be too advanced and won't work with the sample documentation)
 * be relatively static, meaning not changing more than once every couple months
@@ -23,7 +23,7 @@ Good example: The [City has a map of parking decks](http://www.greenvillesc.gov/
 
 Bad Examples: Things like Greenville restaurants, potholes, or vape shops. These change frequently and/or are already done well enough by other services.
 
-###Map Data Ideas and Staking Your Claim
+### Map Data Ideas and Staking Your Claim
 
 Below is intended to seed your brain. The [first class of SC Codes implemented many of the ideas below](https://data.openupstate.org/maps/) so this class will have to put more effort into original ideas.
 
