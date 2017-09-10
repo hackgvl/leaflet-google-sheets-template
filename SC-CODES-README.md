@@ -5,7 +5,7 @@
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 1. Start thinking about ideas for open/public data you'd like to gather and share with the world.
 1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
-1. Continue reading below for details about weeks 2 and 3
+1. Continue reading below for details about upcoming weeks.
 
 ### Ideally, your data set should:
 * already be publicly discoverable
@@ -45,7 +45,7 @@ Please review the existing layers and add your name and idea to [the list](https
 * Public (K-12) Schools
 
 ## <a name="week3">Goals for Week 3</a>
-1. Complete the Week 1 goals above
+1. Complete the Week 1-2 goals above
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
 1. Do a basic Git command and push to GitHub
