@@ -25,7 +25,7 @@ Bad Examples: Things like Greenville restaurants, potholes, or vape shops. These
 
 ### Map Data Ideas and Staking Your Claim
 
-Below is intended to seed your brain. The [first class of SC Codes implemented many of the ideas below](https://data.openupstate.org/maps/) so this class will have to put more effort into original ideas. Also, there may be some incomplete data sets that you can work on.
+Below is intended to seed your brain. The [first class of SC Codes implemented many of the ideas below](https://data.openupstate.org/maps-layers) so this class will have to put more effort into original ideas. Also, there may be some incomplete data sets that you can work on.
 
 Please review the existing layers and add your name and idea to [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371) to reserve
 
