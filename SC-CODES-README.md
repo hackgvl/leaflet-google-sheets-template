@@ -95,7 +95,7 @@ Please review the existing layers and add your name and idea to [the list](https
 ### Share Your Work
 Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0) in the yellow highlighted boxes.
 
-Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/maps/, which will become the reliable, hosted location for the public.  If/as you modify the project in the future we'd be able to easily pull your changes to https://data.openupstate.org/maps/
+Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/map-layers, which will become the reliable, hosted location for the public.  If/as you modify the project in the future we'd be able to easily pull your changes to https://data.openupstate.org/map-layers
 
 ### Git Commit and Push
 In week 3 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using Git.
