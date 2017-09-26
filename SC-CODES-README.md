@@ -91,7 +91,7 @@ Go to your Cloud 9 workspace and click in the terminal tab. It should be the bot
 
 In the terminal, run ``git status`` and Git will tell you about the modified files. These are "Changes not staged for commit".
 
-You can also run ``git diff`` to see a "differential" of what's modified but not yet "staged" . You can use the arrow up/down or page up/down keys to scroll through the diff. There are + and - symbols showing which lines in the code are new or removed.  Press the letter q  and/or ESC to exit the diff tool if you see a colon at the bottom of the terminal.
+You can also run ``git diff`` to see a "differential" of what's modified but not yet "staged" . You can use the arrow up/down or page up/down keys to scroll through the diff. There are + and - symbols showing which lines in the code are new or removed.  If you see a colon (:) at the bottom of the terminal then you probably need to type the letter q (for quit) to escape out and back to the main terminal.
 
 Run ``git add index.html`` and then ``git add geojson.php`` to stage the files for commiting.
 
