@@ -76,16 +76,16 @@ Once you've settled on an idea, whether new or co-maintaining, add your name and
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
 ## <a name="week4">Goals for Week 4+</a>
-1. Add your GitHub repository, geojson.php URL, and Google Sheet URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371)
+1. Add your project specific URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371)
 1. Git add, commit, and push your changes from Cloud 9 up to GitHub.
 
 ### Share Your Work
-Please share your GitHub repository, GeoJSON URL, and Google Spreadsheet in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371) in the yellow highlighted boxes.
+Please share your Google Spreadsheet link, spreadsheet CSV link, GeoJSON link, Map Preview link, and GitHub link in the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371) in the yellow highlighted boxes.
 
-Through the power of GitHub, we'll publically publish your map and geojson under a directory of https://data.openupstate.org/map-layers, which will become the reliable, hosted location for the public.  If/as you modify the project in the future we'd be able to easily pull your changes to https://data.openupstate.org/map-layers
+Through the power of GitHub, we'll clone your map and GeoJSON to https://data.openupstate.org/map-layers where it will be publically available to the broader community.
 
 ### Git Commit and Push
-In week 3 you changed the index.html and geojson.php.  Let's add and commit these chages to version control using Git.
+Earlier, you changed the index.html and geojson.php.  Let's add and commit these chages to version control using Git.
 
 Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
 
