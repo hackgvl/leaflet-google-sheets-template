@@ -1,10 +1,10 @@
 # SC Codes Week Project Goals
 
-## <a name="week1">Goals for Week 1-2</a>
+## <a name="week1">Goals for Week 1-3</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
-1. Start thinking about ideas for open/public data you'd like to gather and share with the world.
 1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
+1. Start thinking about ideas for open/public data you'd like to maintain or co-maintain.
 1. Continue reading below for details about upcoming weeks.
 
 ### Ideally, your data set should:
@@ -75,7 +75,7 @@ Once you've settled on an idea, whether new or co-maintaining, add your name and
 1. Now, read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
-## <a name="week4">Goals for Week 4</a>
+## <a name="week4">Goals for Week 4+</a>
 1. Add your GitHub repository, geojson.php URL, and Google Sheet URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=0)
 1. Git add, commit, and push your changes from Cloud 9 up to GitHub.
 
