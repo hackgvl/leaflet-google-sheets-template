@@ -25,24 +25,11 @@ Bad Examples: Things like Greenville restaurants, potholes, or vape shops. These
 
 ### Map Data Ideas and Staking Your Claim
 
-Below is intended to seed your brain. The [first class of SC Codes implemented many of the ideas below](https://data.openupstate.org/map-layers) so this class will have to put more effort into original ideas. Also, there may be some incomplete data sets that you can work on.
+The [first two classes of SC Codes implemented many ideas](https://data.openupstate.org/map-layers). As such, your class has the option of creating a new, original idea OR helping co-maintain an existing map layer.
 
-Please review the existing layers and add your name and idea to [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371) to reserve
+If you opt to [co-maintain an existing map layer](https://data.openupstate.org/map-layers) then click on the map title and then click the "Contribute Link" under that maps details. It should open a Google Spreadsheet and you may see a blue "View only" button. Click that View only button and you can request edit access from the original owner of the spreadsheet. If you try to access an existing spreadsheet and get an error then contact Jim and Pamela on Slack.
 
-* Libraries
-* Historic Sites
-* Parks
-* Parking Decks
-* Community Gardens
-* Waterfalls
-* Trail Parking
-* Bike Racks
-* Danger Zones along trails
-* City and County Recycling locations
-* City and County Trash / Convenience Centers
-* Dog Parks
-* Tree Planting Sites
-* Public (K-12) Schools
+Once you've settled on an idea, whether new or co-maintaing, add your name and the idea to [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371) to stake your claim.
 
 ## <a name="week3">Goals for Week 3</a>
 1. Complete the Week 1-2 goals above
