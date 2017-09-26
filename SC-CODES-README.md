@@ -87,7 +87,7 @@ Through the power of GitHub, we'll clone your map and GeoJSON to https://data.op
 ### Git Commit and Push
 Earlier, you changed the index.html and geojson.php.  Let's add and commit these chages to version control using Git.
 
-Go to your Cloud 9 workspace and click in the terminal tab at the bottom.
+Go to your Cloud 9 workspace and click in the terminal tab. It should be the bottom-left tab that says "bash".
 
 In the terminal, run ``git status`` and Git will tell you about the modified files. These are "Changes not staged for commit".
 
