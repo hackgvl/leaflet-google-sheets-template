@@ -1,6 +1,6 @@
 # SC Codes Week Project Goals
 
-## <a name="week1">Goals for Week 1-3</a>
+## <a name="week1">Goals for Week 1</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
@@ -31,7 +31,7 @@ If you opt to [co-maintain an existing map layer](https://data.openupstate.org/m
 
 Once you've settled on an idea, whether new or co-maintaining, add your name and the idea to [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371) to stake your claim.
 
-## <a name="week3">Goals for Week 3</a>
+## <a name="week3">Goals for Week 2-3</a>
 1. Complete the Week 1-2 goals above
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
