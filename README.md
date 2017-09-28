@@ -58,11 +58,11 @@ You should plan on only having 1 tab in the spreadsheet. However, if for some re
 Use Google's *Share* function to give *Edit* permissions. You should consider allowing "Anyone with the link" to edit the data and then all you need to do is share the edit URL with trusted people.
 
 ### Using PHP to Convert a Google Sheets CSV to a GeoJSON File
-The "CSV data source URL" to be used in the geojson.php PHP script is the URL from the Publish to Web step
+The "CSV data source URL" to be used in the geojson.php PHP script is the URL from the "File -> Publish to Web" step
 
 ex. ``https://docs.google.com/spreadsheets/d/{a-bunch-of-random-numbers-and-letters}/pub?output=csv``
 
-Insert that URL in the $googleSpreadsheetUrl variable near the top of geojson.php
+Insert that URL in the $googleSpreadsheetUrl variable near the top of geojson.php file in your editor / workspace.
 
 The column values are used in this example to generate the GeoJSON are hard-coded to include 4 fields: longitude, latitude, title, and notes.
 
