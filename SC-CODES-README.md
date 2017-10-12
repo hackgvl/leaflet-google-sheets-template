@@ -117,11 +117,11 @@ In the terminal, run ``git branch -a``
 
 We're going to tell Git where to find the ["remote upstream"](https://help.github.com/articles/configuring-a-remote-for-a-fork/) pointing at our [original template project](https://github.com/codeforgreenville/leaflet-google-sheets-template) by running ``git remote add upstream https://github.com/codeforgreenville/leaflet-google-sheets-template.git``
 
-Run ``git branch -a`` again and you'll see a new branch "remotes/upstream/master"
-
 We want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/).
 
 ``git fetch upstream``
+
+Run ``git branch -a`` again and you'll see a new branch "remotes/upstream/master"
 
 This fetched the latest upstream code into a branch within your Cloud 9 environment. Note, you won't see anything change within Cloud 9, but your local Git has a copy of the upstream master branch at your disposal.
 
