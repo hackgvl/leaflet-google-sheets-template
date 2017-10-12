@@ -114,5 +114,5 @@ example http://leafletjs.com/examples/geojson.html
 
 [Documentation for MapQuest and Leaflet](https://developer.mapquest.com/documentation/leaflet-plugins/maps/)
 
----
+----
 Original concept from [OpenData Day 2014 in Greenville SC](https://github.com/OpenUpstate/OpenDataDay2014)
