@@ -71,7 +71,7 @@ Once you've settled on an idea, whether new or co-maintaining, add your name and
 1. To push this commit up to the GitHub fork repository you now need to run ``git push``
 1. Go back to your fork page on GitHub and refresh the page. You should no longer see the deleted file and you should notice your commit message.
 
-# Steps to Get the Map and Spreadsheet Working
+### Steps to Get the Map and Spreadsheet Working
 1. Now, read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
