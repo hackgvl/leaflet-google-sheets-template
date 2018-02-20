@@ -1,11 +1,10 @@
-# SC Codes Week Project Goals
+# SC Codes Project Goals
 
-## <a name="week1">Goals for Week 1</a>
+## <a name="one">Getting Started</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
 1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
 1. Start thinking about ideas for open/public data you'd like to maintain or co-maintain.
-1. Continue reading below for details about upcoming weeks.
 
 ### Ideally, your data set should:
 * already be publicly discoverable
@@ -31,8 +30,7 @@ If you opt to [co-maintain an existing map layer](https://data.openupstate.org/m
 
 Once you've settled on an idea, whether new or co-maintaining, add your name and the idea to [the list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371) to stake your claim.
 
-## <a name="week3">Goals for Week 2-3</a>
-1. Complete the Week 1-2 goals above
+## <a name="two">Putting it All Together</a>
 1. Fork the GitHub Project
 1. Setup a Cloud9 Workspace that talks with your GitHub fork
 1. Do a basic Git command and push to GitHub
@@ -75,7 +73,7 @@ Once you've settled on an idea, whether new or co-maintaining, add your name and
 1. Now, read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
 1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
-## <a name="week4">Goals for Week 4+</a>
+## <a name="three">Wrapping Up</a>
 1. Add your project specific URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371)
 1. Git add, commit, and push your changes from Cloud 9 up to GitHub.
 
