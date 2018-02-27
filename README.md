@@ -42,7 +42,7 @@ Now what?  Well, things get stale and maps die, that's what.
 * Rename your copy and start adding real "point" data, including geographic coordinates (longitude, latitude) and other properties
 
 ### Publish Your Google Spreadsheet
-* Go to (File -> Publish to Web).
+* Go to (File -> Advanced -> Publish to Web).
 * There are two drop-down boxes near the top of the box that opens.
 * For the left drop-down box select "Entire Document"
 * For the right drop-down box select "Comma-seperated values (.csv)
