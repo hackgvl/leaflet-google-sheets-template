@@ -4,100 +4,80 @@
   <meta name="description" content="A demo map layer for Greenville. See data.codeforgreenville.org for more."/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-  <link rel="stylesheet" href="./map.css" />
+  <link rel="stylesheet" href="map.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
   <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=bA5WISoAPsk5r0GJ3hHGTkAMFEskFOA2"></script>
 </head>
 <body>
-	<div id="map">
-		
-	</div>
-	
+    <div id="map">
+    </div>
     <script>
-
-var greenIcon = new L.Icon({
-  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+var mileMarkerIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
   iconSize: [20,30],
   iconAnchor: [12, 32],
   popupAnchor: [1, -34],
-  shadowSize: [20, 30]
 });
-
-var libraryIcon = new L.Icon({
-  iconUrl: './library.png',
-  iconSize: [32, 32],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [32, 32]
-});
-
-var parkIcon = new L.Icon({
-  iconUrl: './parking.png',
-  shadowUrl: './parking.png',
+var parkingIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
   iconSize: [36, 36],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
-  shadowSize: [36, 36]
 });
-
 var waterFountainIcon = new L.Icon({
-  iconUrl: './water-fountain.png',
-  shadowUrl: './water-fountain.png',
-  iconSize: [36, 36],
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+  iconSize: [20, 30],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
-  shadowSize: [36, 36]
 });
-
+var entranceIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  iconSize: [10, 10],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+});
       // using leafletjs.com and its GeoJSON
     function onEachParkingFeature(feature, layer) {
       // does this feature have a property named popupContent?
       if (feature.properties && feature.properties.title) {
-        var popuphtml = "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
+        var popuphtml = "<em>Parking Spot</em> " + "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
         layer.bindPopup(popuphtml);
-        layer.setIcon(parkIcon);
+        layer.setIcon(parkingIcon);
       }
     }
-
       // using leafletjs.com and its GeoJSON
-    function onEachLibraryFeature(feature, layer) {
+    function onEachEntranceFeature(feature, layer) {
       // does this feature have a property named popupContent?
       if (feature.properties && feature.properties.title) {
-        var popuphtml = "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
+        var popuphtml = "<em>Entrance</em> " + "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
         layer.bindPopup(popuphtml);
-        layer.setIcon(libraryIcon);
+        layer.setIcon(entranceIcon);
       }
     }
-
-      // using leafletjs.com and its GeoJSON    
-    function onEachPointFeature(feature, layer) {
+      // using leafletjs.com and its GeoJSON
+    function onEachMileMarkerFeature(feature, layer) {
       // does this feature have a property named title?
       if (feature.properties && feature.properties.title) {
-        var popuphtml = "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
+        var popuphtml = "<em>Mile Marker</em> " + "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
         layer.bindPopup(popuphtml);
-        layer.setIcon(greenIcon);
+        layer.setIcon(mileMarkerIcon);
       }
     }
-
-      // using leafletjs.com and its GeoJSON    
+      // using leafletjs.com and its GeoJSON
     function onEachFountainFeature(feature, layer) {
       // does this feature have a property named title?
       if (feature.properties && feature.properties.title) {
-        var popuphtml = "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
+        var popuphtml = "<em>Water Fountain</em> " + "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li></ul>";
         layer.bindPopup(popuphtml);
         layer.setIcon(waterFountainIcon);
       }
     }
-
     var trailcount = 0;
-
     function onEachLineFeature(feature, layer) {
-      layer.options.color = '#01a833';
+      layer.options.color = '#FFF';
       layer.options.opacity = 1;
       layer.options.weight = 8;
 //      console.log(layer);
-
       if(trailcount == 2) {
         layer.options.weight = 6;
         layer.options.opacity = .7;
@@ -110,9 +90,7 @@ var waterFountainIcon = new L.Icon({
         layer.bindPopup(popuphtml);
       }
       trailcount++;
-
     }
-
     // Read JSON to variable via http://stackoverflow.com/questions/8191238/how-can-i-set-json-into-a-variable-from-a-local-url
     function readJSON(file) {
       var request = new XMLHttpRequest();
@@ -121,47 +99,33 @@ var waterFountainIcon = new L.Icon({
       if (request.status == 200)
         return request.responseText;
     };
-
       var mapLayer = MQ.mapLayer(), map;
-
       map = L.map('map', {
         layers: mapLayer,
         center: [ 34.8650212,-82.3985128 ],
         zoom: 12
       });
-
 //      map.locate({setView: true, maxZoom: 16});
-
       var milesdata = JSON.parse(readJSON('https://data.openupstate.org/map/preview/swamp-rabbit-trail-mile-markers/geojson.php'));
-
       miles = L.geoJson(milesdata, {
-        onEachFeature: onEachPointFeature
+        onEachFeature: onEachMileMarkerFeature
       }).addTo(map);
-
-      var librarydata = JSON.parse(readJSON('https://data.openupstate.org/map/preview/libraries/geojson.php'));
-
-      libraries = L.geoJson(librarydata, {
-        onEachFeature: onEachLibraryFeature
+      var entrancedata = JSON.parse(readJSON('https://data.openupstate.org/map/geojson/swamp-rabbit-trail-entrances/'));
+      entrances = L.geoJson(entrancedata, {
+        onEachFeature: onEachEntranceFeature
       }).addTo(map);
-
       var fountaindata = JSON.parse(readJSON('https://data.openupstate.org/map/preview/swamp-rabbit-trail-water-fountains/geojson.php'));
-
       fountains = L.geoJson(fountaindata, {
         onEachFeature: onEachFountainFeature
       }).addTo(map);
-
       var swamprabbit = JSON.parse(readJSON('https://data.openupstate.org/map/preview/swamp-rabbit-trail-path/trail.geojson'));
-
       srt = L.geoJson(swamprabbit, {
         onEachFeature: onEachLineFeature
       }).addTo(map);
-
       var parkingdata = JSON.parse(readJSON('https://data.openupstate.org/map/preview/swamp-rabbit-trail-parking/geojson.php'));
-
       parking = L.geoJson(parkingdata, {
         onEachFeature: onEachParkingFeature
       }).addTo(map);
-
       tileControls = {
         'Map': mapLayer,
         'Hybrid': MQ.hybridLayer(),
@@ -169,18 +133,14 @@ var waterFountainIcon = new L.Icon({
         'Dark': MQ.darkLayer(),
         'Light': MQ.lightLayer()
       };
-
       dataControls = {
         'Water Fountains': fountains,
-        'Libraries': libraries,
+        'Entrances': entrances,
         'Mile Markers': miles,
         'Parking': parking,
         'Swamp Rabbit Trail': srt
       };
-      
       L.control.layers(tileControls, dataControls).addTo(map);
-
   </script>
-
 </body>
 </html>
