@@ -3,7 +3,7 @@
 ## <a name="one">Getting Started</a>
 1. Setup a Cloud9 account using the invite sent via email by Pamela (if it asks for a credit card contact Pamela)
 1. Connect your GitHub account to Cloud9 [via Connected Services](https://c9.io/account/services)
-1. Understand the [broader purpose of this open data project](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md)
+1. Understand the [broader purpose of this open data project](https://github.com/hackgvl/leaflet-google-sheets-template/blob/master/README.md)
 1. Start thinking about ideas for open/public data you'd like to maintain or co-maintain.
 
 ### Ideally, your data set should:
@@ -38,7 +38,7 @@ Once you've settled on an idea, whether new or co-maintaining, add your name and
 
 ### Steps on GitHub
 1. Decide on which data set you want to build
-1. Go to [our template GitHub project/repo](https://github.com/codeforgreenville/leaflet-google-sheets-template) and click "Fork" in the top-left
+1. Go to [our template GitHub project/repo](https://github.com/hackgvl/leaflet-google-sheets-template) and click "Fork" in the top-left
 1. We are [forking](https://help.github.com/articles/fork-a-repo/) with the intention of creating a starting point for your project. We will not get into "pull requests", but understand that people also fork projects as a way to create a branch/copy and then contribute back to the original project.
 1. If you see a pop-up that says "Where should we fork this repository?" then select your personal user name.
 1. GitHub will create a copy of the template repo. You'll see this under your GitHub account, like yourusername/leaflet-google-sheets-template
@@ -70,8 +70,8 @@ Once you've settled on an idea, whether new or co-maintaining, add your name and
 1. Go back to your fork page on GitHub and refresh the page. You should no longer see the deleted file and you should notice your commit message.
 
 ### Steps to Get the Map and Spreadsheet Working
-1. Now, read the main [README.md](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
-1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind codeforgreenville:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
+1. Now, read the main [README.md](https://github.com/hackgvl/leaflet-google-sheets-template/blob/master/README.md) file for details on how to create a public spreadsheet and a Leaflet map.
+1. Side note: You can ignore messages like "This branch is 1 commit ahead, 1 commit behind hackgvl:master." on your GitHub fork page. This means changes were made to the project you forked. You're on your own now and don't need to keep in sync with the fork's origin.
 
 ## <a name="three">Wrapping Up</a>
 1. Add your project specific URLs to the [open data list](https://docs.google.com/spreadsheets/d/1IWsFT1p0ZY-DInfMOFq_gmqpGuKyl5wyBb9VoyoEjRs/edit#gid=1517769371)
@@ -113,7 +113,7 @@ Right now you have a single master branch and a link to the remote origin master
 
 In the terminal, run ``git branch -a``
 
-We're going to tell Git where to find the ["remote upstream"](https://help.github.com/articles/configuring-a-remote-for-a-fork/) pointing at our [original template project](https://github.com/codeforgreenville/leaflet-google-sheets-template) by running ``git remote add upstream https://github.com/codeforgreenville/leaflet-google-sheets-template.git``
+We're going to tell Git where to find the ["remote upstream"](https://help.github.com/articles/configuring-a-remote-for-a-fork/) pointing at our [original template project](https://github.com/hackgvl/leaflet-google-sheets-template) by running ``git remote add upstream https://github.com/hackgvl/leaflet-google-sheets-template.git``
 
 We want to grab a copy of the [remote upstream](https://help.github.com/articles/syncing-a-fork/).
 
