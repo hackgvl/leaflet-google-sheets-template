@@ -1,27 +1,84 @@
 <html>
 <head>
-  <title>Greenville Open Data Map Layer</title>
-  <meta name="description" content="A map layer for Greenville. See data.openupstate.org for more."/>
+  <title>Map Layer</title>
+  <meta name="description" content="A map layer. Add more details about your specific map."/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-  <link rel="stylesheet" href="./map.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-  <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=bA5WISoAPsk5r0GJ3hHGTkAMFEskFOA2"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/jitbit/HtmlSanitizer@master/HtmlSanitizer.js"></script>
+
+  <link rel="stylesheet" href="map.css" />
 </head>
 <body>
-	<div id="map">
-		
-	</div>
+
+    <div id="map"></div>
 	
-    <script>
-      // using leafletjs.com and its GeoJSON    
-    function onEachFeature(feature, layer) {
-      // does this feature have a property named popupContent?
-      if (feature.properties && feature.properties.title) {
-      	var popuphtml = "<strong>" + feature.properties.title + "</strong><ul><li>Notes: " + feature.properties.notes + "</li><li>Property 3: " + feature.properties.property3 + "</li></ul>";
+    <script type="text/javascript">
+
+    // define a function to apply proper case to text
+    String.prototype.toProperCase = function () {
+        return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    };
+
+    // define a red icon
+    var greenIcon = new L.Icon({
+      iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-green.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25,41],
+      iconAnchor: [12, 32],
+      popupAnchor: [1, -34],
+      shadowSize: [25, 41]
+    });
+
+    // define a green icon
+    var redIcon = new L.Icon({
+      iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-red.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25,41],
+      iconAnchor: [12, 32],
+      popupAnchor: [1, -34],
+      shadowSize: [25, 41]
+    });
+
+
+    // using leafletjs.com and its GeoJSON    
+    function onEachMapFeature(feature, layer) {
+      if (feature.properties) {
+
+        popuphtml = '<ul>';
+
+	// loop through each feature.properites of the map point
+        for (const [key, value] of Object.entries(feature.properties)) {
+	  // if the value exists and isn't the default OBJECTID used in some systems
+          if (value && key != 'OBJECTID')
+          {
+            // regular expression for matching on a URL
+            urlRegEx = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+
+            // render the pop-up content. Replace _ with space in the key and convert any URLs in the value to a link
+            // cast to strings to avoid strings with only numbers from breaking the replaceAll()
+            var popuphtml = popuphtml + "<li><strong>" + key.toString().replaceAll('_', ' ').toProperCase() + "</strong>: " + value.toString().replaceAll(urlRegEx, '<a href="$1">$1</a>') + "</li>"
+          }
+        } // end foreach feature.property
+
+        // sanitize the content
+        popuphtml = HtmlSanitizer.SanitizeHtml(popuphtml) + '</ul>';
+
+	// bind the pop-up HTML to the specific point data
         layer.bindPopup(popuphtml);
-      }
-    }
+
+        // use a green icon marker, by default
+        layer.setIcon(greenIcon);
+       
+        // if the point's title contains the string "CLOSED", use a red icon marker
+        if (feature.properties.title && feature.properties.title.includes("CLOSED")) {
+            layer.setIcon(redIcon);
+        } // end if, closed, used red marker
+
+      } // end if, feature.properties exist 
+    } // end function, onEachMapFeature
 
       // Read JSON to variable via http://stackoverflow.com/questions/8191238/how-can-i-set-json-into-a-variable-from-a-local-url
     function readJSON(file) {
@@ -30,32 +87,26 @@
       request.send(null);
       if (request.status == 200)
         return request.responseText;
-      };
+    }
 		
-      var geoJsonData = JSON.parse(readJSON('geojson.php'));
+      var map = L.map('map').setView({lon: -82.3985128, lat: 34.8507212}, 12);
 
-      var mapLayer = MQ.mapLayer(), map;
-
-      map = L.map('map', {
-        layers: mapLayer,
-        center: [ 34.8507212,-82.3985128 ],
-        zoom: 15
-      });
-
-      L.control.layers({
-        'Map': mapLayer,
-        'Hybrid': MQ.hybridLayer(),
-        'Satellite': MQ.satelliteLayer(),
-        'Dark': MQ.darkLayer(),
-            'Light': MQ.lightLayer()
+      // add the OpenStreetMap tiles
+      // this free server has limits, so don't use abuse this map tile server
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
       }).addTo(map);
+
 
 //      map.locate({setView: true, maxZoom: 16});
 
-      L.geoJson(geoJsonData, {
-        onEachFeature: onEachFeature
-      }).addTo(map);
-  </script>
+      var jsonData = JSON.parse(readJSON('geojson.php'));
 
+      customLayer = L.geoJson(jsonData, {
+        onEachFeature: onEachMapFeature
+      }).addTo(map);
+
+  </script>
 </body>
 </html>
