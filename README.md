@@ -80,39 +80,17 @@ Non-programming / manual ways to get latitude and longitude numbers
 ### Rendering a Leaflet Map Showing the GeoJSON Data
 The index.html is where you look to see the actual map. There is already a line of code to load the geojson.php into a ``$geoJsonData`` Javascript variable and render that to the Leaflet map. So, all you have to do is open the index.html in your browser.
 
-Leaflet JS is using open MapQuest tiles. [As of July 2016](http://devblog.mapquest.com/2016/06/15/modernization-of-mapquest-results-in-changes-to-open-tile-access/),
-it's necessary to [register an account with MapQuest. Up to 15,000 views a month is free](https://developer.mapquest.com/plans).
+[Leaflet JS can use many different providers of map tiles](https://github.com/leaflet-extras/leaflet-providers). Though, each provider has it's own pricing and limitations. This project initially used MapQuest raster tiles, but the current version uses a free OpenStreetMap tile server (for very low volume use cases). 
 
-### Testing in Cloud 9
-* After [forking this base project and setup a C9 workspace](https://github.com/codeforgreenville/leaflet-google-sheets-template/blob/master/SC-CODES-README.md)
-* Save your changes (File-> Save or Ctrl + S)
-* Click green Run icon near the top of the C9 workspace and it will fire up an Apache web service running your environment
-* On the command line at the bottom of C9 you'll see a message like ``Starting Apache httpd, serving https://leaflet-wi-fi-map-allella.c9users.io/`` (your public workspace URL)
-* Visit your public workspace URL in a new browser tab and you should see your map with the points specified in the spreadsheet. This is showing you the index.html where the map is rendered.
-* You can also see your GeoJSON by adding /geojson.php to the end of your URL.
+Please read each provider's documentation and pricing. Many have a free tier, but they may only be allowed for non-commercial use.
 
-### Registering for Map Tiles
+Also, each provider should have different documentation for applying their map tiles, so this example code may not work without notable changes to the section of the Javascript the connects the map tiles to the map.
 
-The base project includes a MapQuest key (key=bA5WISoAPsk5r0GJ3hHGTkAMFEskFOA2) in the index.html.
-
-Ideally you should register your own free account and use your own key to avoid exhausting this base key if too many people start using or abusing it.
-
-If using Mapquest then after registering for an account do the following:
-* [Login to your developer account](https://developer.mapquest.com/user/login)
-* Go to Keys and Reporting
-* Register a new Application. Give it a name. The callback may not be necessary. Save the application
-* Click on the "Application" you created and copy the "Consumer Key", NOT the secret.
-* You'll use your new key value in the index.html in the MapQuest ``<script>`` tag
-* Replace the existing key with your key where is says ``key=bA5WISoAPsk5r0GJ3hHGTkAMFEskFOA2``
-
-
-If you register with CloudMade you can use their map tiles instead, as described by Leaflet 
-example http://leafletjs.com/examples/geojson.html
+### Testing
+The geojson.php file will need a running "server" in order to process.  You can use a locally running server PHP server, including [PHP's built-in server](https://www.php.net/manual/en/features.commandline.webserver.php). Or, any web server, like Apache or Nginx, can be configured to process PHP files.
 
 ### Multiple Layers and Advanced Leaflet
-[Leaflet has a bunch of other plug-ins and options](http://leafletjs.com/reference-1.0.0.html), so the maps can be tweaked in all sorts of ways.
-
-[Documentation for MapQuest and Leaflet](https://developer.mapquest.com/documentation/leaflet-plugins/maps/)
+[Leaflet has a bunch of other plug-ins and options](https://leafletjs.com/index.html), so the maps can be tweaked in all sorts of ways.
 
 ----
 Original concept from [OpenData Day 2014 in Greenville SC](https://github.com/OpenUpstate/OpenDataDay2014)
